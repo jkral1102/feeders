@@ -14,7 +14,7 @@ class Facebook extends Component {
   render() {
     return (
       <div>
-      
+          {/* Facebook login - see react-facebook NPM documentation here: https://www.npmjs.com/package/react-facebook */}
           <FacebookProvider appId="446798905751855">
             <Login
               scope="email"
