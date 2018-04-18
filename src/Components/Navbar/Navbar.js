@@ -25,9 +25,10 @@ class Navbar extends Component {
     return (
       <div id="navbar">
 
-        {/* Logo click displays Facebook login btn */}
+        {/* Logo click - displays Facebook login btn by first setting state to loginClicked: true */}
         <img src={loginLogo} alt="login" id="icon" onClick={this.showLogin} />
 
+        {/* (Conditional Rendering of the Facebook component) - if loginClicked: true, display component */}
         <div id="fbLogin">
         {this.state.loginClicked ? <Facebook /> : null}
         </div>
@@ -35,9 +36,9 @@ class Navbar extends Component {
         {/* Navbar links  */}
         <div id="menu">
           <ul class="menu-items">
-            <li><a href="www.google.com">Home</a></li>
-            <li><a href="www.google.com">About</a></li>
-            <li><a href="www.google.com">Upgrade to Premium</a></li>
+            <li><a href="https://www.google.com">Home</a></li>
+            <li><a href="https://www.google.com">About</a></li>
+            <li><a href="https://www.google.com">Upgrade to Premium</a></li>
           </ul>
         </div>
 
