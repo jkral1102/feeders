@@ -1,8 +1,8 @@
 import React, { Component} from 'react';
-//import './Facebook.css';
+import './Facebook.css';
 import FacebookProvider, { Login } from 'react-facebook';
- 
-export default class Facebook extends Component {
+
+class Facebook extends Component {
   handleResponse = (data) => {
     console.log(data);
   }
@@ -13,16 +13,21 @@ export default class Facebook extends Component {
  
   render() {
     return (
-      <FacebookProvider appId="446798905751855">
-        <Login
-          scope="email"
-          onResponse={this.handleResponse}
-          onError={this.handleError}
-        >
-          <span>Login via Facebook</span>
-        </Login>
-      </FacebookProvider>
+      <div>
+      
+          <FacebookProvider appId="446798905751855">
+            <Login
+              scope="email"
+              onResponse={this.handleResponse}
+              onError={this.handleError}
+            >
+              <span>Login via Facebook</span>
+            </Login>
+          </FacebookProvider>
+      </div>
     );
   }
 }
+
+export default Facebook;
 
