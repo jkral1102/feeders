@@ -1,5 +1,6 @@
-#navbar {
-    position: fixed;
+.navbar {
+    position: sticky;
+    margin-bottom: 10px;
     width: 100%;
     height: auto;
     background-color: #0500a0aa;
@@ -7,34 +8,32 @@
     display: block;
     padding-left: 20px;
     padding-bottom: 20px;
-  }
+}
 
-  #title {
-      font-size: 45px;
-      color: white;
+.title {
+    font-size: 45px;
+    color: white;
+    width: 50%;
+    margin: auto;
+}
+#subtitle {
+    font-size: 18px;
+    margin-top: 20px;
+}
 
-      margin: auto;
-      width: 50%;
-      margin-top: 20px;
-  }
-  #subtitle {
-      font-size: 18px;
-      margin-top: 20px;
-  }
+.menu{
+    float: right;
+}
 
-  #menu{
-      float: right;
-  }
+ul{ 
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #0500a0aa;;
+}
 
-  ul{ 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #0500a0aa;;
-  }
-  
-  li {
+li {
     float: left;
     top: 0;
     position: relative;
@@ -56,7 +55,7 @@ li a:hover {
 #icon{
     height: 100px;
     float: left;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 
