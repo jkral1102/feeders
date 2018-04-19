@@ -23,7 +23,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <div id="navbar">
+      <div className="navbar">
 
         {/* Logo click - displays Facebook login btn by first setting state to loginClicked: true */}
         <img src={loginLogo} alt="login" id="icon" onClick={this.showLogin} />
@@ -34,8 +34,8 @@ class Navbar extends Component {
         </div>
 
         {/* Navbar links  */}
-        <div id="menu">
-          <ul class="menu-items">
+        <div className="menu">
+          <ul className="menu-items">
             <li><a href="https://www.google.com">Home</a></li>
             <li><a href="https://www.google.com">About</a></li>
             <li><a href="https://www.google.com">Upgrade to Premium</a></li>
@@ -43,7 +43,7 @@ class Navbar extends Component {
         </div>
 
 
-        <div id="title"> <div>Feeders</div>
+        <div className="title"> <div>Feeders</div>
           <div id="subtitle">Your go-to social media dashboard</div>
         </div>
       </div>
