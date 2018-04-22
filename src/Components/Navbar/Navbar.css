@@ -24,15 +24,14 @@ ul{
     overflow: hidden;
 }
 
-  ul{ 
+ul{ 
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #0500a0aa;;
-  }
-  
-  li {
+}
+
+li {
     float: left;
     top: 0;
     position: relative;
