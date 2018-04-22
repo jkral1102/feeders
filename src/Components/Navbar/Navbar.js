@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './Navbar.css';
 import Facebook from "../Facebook";
-import loginLogo from './loginLogo.png';
+//import loginLogo from './loginLogo.png';
+import slogan from './slogan.png';
+import loginbtn from './icon.png';
 
 
 class Navbar extends Component {
@@ -26,13 +28,18 @@ class Navbar extends Component {
       <div id="navbar">
 
         {/* Logo click - displays Facebook login btn by first setting state to loginClicked: true */}
-        <img src={loginLogo} alt="login" id="icon" onClick={this.showLogin} />
+        
+        <img src={loginbtn} alt="login" id="loginIcon" onClick={this.showLogin} />
 
         {/* (Conditional Rendering of the Facebook component) - if loginClicked: true, display component */}
         <div id="fbLogin">
         {this.state.loginClicked ? <Facebook /> : null}
         </div>
 
+        <div id="sloganDiv">
+        <img src={slogan} alt="login" id="slogan" onClick={this.showLogin} />
+        </div>
+      
         {/* Navbar links  */}
         <div id="menu">
           <ul class="menu-items">
@@ -42,10 +49,6 @@ class Navbar extends Component {
           </ul>
         </div>
 
-
-        <div id="title"> <div>Feeders</div>
-          <div id="subtitle">Your go-to social media dashboard</div>
-        </div>
       </div>
     );
   }

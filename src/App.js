@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 // All components 
-// import Facebook from "./Components/Facebook";
+import Cards from "./Components/Cards";
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Navbar /> 
-        {/* <Facebook /> */}
-        
-
+        <Cards />
+        <Footer/>
       </div>
     );
   }
