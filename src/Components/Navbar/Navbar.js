@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Navbar.css';
-import Facebook from "../Facebook";
+import FacebookLogin from "../FacebookLogin";
 //import loginLogo from './loginLogo.png';
 import slogan from './slogan.png';
 import loginbtn from './icon.png';
@@ -33,7 +33,7 @@ class Navbar extends Component {
 
         {/* (Conditional Rendering of the Facebook component) - if loginClicked: true, display component */}
         <div id="fbLogin">
-        {this.state.loginClicked ? <Facebook /> : null}
+        {this.state.loginClicked ? <FacebookLogin /> : null}
         </div>
 
         <div id="sloganDiv">

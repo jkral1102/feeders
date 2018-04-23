@@ -4,6 +4,7 @@ import './App.css';
 import Cards from "./Components/Cards";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import Twitter from "./Components/Twitter";
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
       <div className="App">
         <Navbar /> 
         <Cards />
+        <Twitter/>
         <Footer/>
       </div>
     );
