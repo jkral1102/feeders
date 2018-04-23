@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 // All components 
-// import Facebook from "./Components/Facebook";
-import Card from "./Components/Cards";
+import Cards from "./Components/Cards";
 import Navbar from "./Components/Navbar";
-
+import Footer from "./Components/Footer";
 
 class App extends Component {
   render() {
@@ -12,9 +11,8 @@ class App extends Component {
       
       <div className="App">
         <Navbar /> 
-        {/* <Facebook /> */}
-        <Card />
-            
+        <Cards />
+        <Footer/>
       </div>
     );
   }
