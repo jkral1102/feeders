@@ -10,7 +10,6 @@ class HomePage extends Component {
     return (
       <div className="App">
         <Navbar /> 
-        <Cards />
         <Twitter/>
         <Footer/>
       </div>
