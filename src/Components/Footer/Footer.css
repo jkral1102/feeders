@@ -3,20 +3,20 @@
     background-color: #151F68;
     max-width: 100%;
     min-width: 100%;
-    height: 4.5em;
+    height: 10em;
     bottom: 0;
-    position: absolute;
+    /* position: absolute; */
     overflow: hidden;
 }
 
 #infoDiv{
     left: 20px;
     margin-top: 10px;
-    position: absolute;
+    /* position: absolute; */
 }
 
 #copyright{
-    position: absolute;
+    /* position: absolute; */
     right: 20px;
     top: 10px;
     font-size: 0.8rem;

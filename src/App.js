@@ -7,7 +7,7 @@ import HomePage from './Components/Pages/home';
 import UserHomePage from './Components/Pages/userHome';
 import AboutPage from './Components/Pages/about';
 import SettingsPage from './Components/Pages/settings';
-import SignupPage from './Components/Pages/signup';
+import SignupPage from './Components/Pages/signup/signup';
 
 
 // All components 
@@ -27,7 +27,7 @@ class App extends Component {
           <Route path="/userHome" component={UserHomePage} />
           <Route path="/settings" component={SettingsPage} />
           <Route path="/signup" component={SignupPage} />
-          <Route component={NoMatch} />
+          {/* <Route component={NoMatch} /> */}
         </div>
       </Router>
 

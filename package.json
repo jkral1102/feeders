@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "lodash": "^4.17.10",
+    "material-ui": "^0.20.0",
+    "mobx-react-form": "^1.34.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-facebook": "^5.0.3",
@@ -11,7 +14,9 @@
     "react-modal": "^3.4.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
-    "react-twitter-widgets": "^1.7.1"
+    "react-tap-event-plugin": "^3.0.2",
+    "react-twitter-widgets": "^1.7.1",
+    "validatorjs": "^3.14.2"
   },
   "scripts": {
     "start": "react-scripts start",
