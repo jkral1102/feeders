@@ -55,9 +55,8 @@ class Twitter extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Search:
-          <input type="text" value={this.state.username} onChange={this.handleChange} placeholder="Search Twitter" />
+          <input id="twitterInput" type="text" onChange={this.handleChange} placeholder="Search Twitter" />
           </label>
-
           <input type="submit" value="Submit" />
         </form>
 

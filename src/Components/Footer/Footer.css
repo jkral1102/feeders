@@ -1,31 +1,32 @@
 #container{
     display: inline-block;
-    background-color: #151F68;
+    background-color: #6c42c3;
     max-width: 100%;
     min-width: 100%;
-    height: 4.5em;
+    height: 10em;
     bottom: 0;
+    /* position: absolute; */
     overflow: hidden;
 }
 
 #infoDiv{
     left: 20px;
     margin-top: 10px;
-    position: absolute;
+    /* position: absolute; */
 }
 
 #copyright{
-    position: absolute;
+    /* position: absolute; */
     right: 20px;
     top: 10px;
     font-size: 0.8rem;
-    color: royalblue;
+    color: #ba99ff;
     text-align: right;
   
 }  
 
 strong{
-    color: royalblue;
+    color: #ba99ff;
     font-weight: bold;
     letter-spacing: 1px;
 }
