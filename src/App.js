@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 // All components 
-import Cards from "./Components/Cards";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Twitter from "./Components/Twitter";
+//import Instagram from "./Components/Instagram";
 
 class App extends Component {
   render() {
@@ -12,9 +12,11 @@ class App extends Component {
       
       <div className="App">
         <Navbar /> 
-        <Cards />
         <Twitter/>
+        
+
         <Footer/>
+
       </div>
     );
   }
