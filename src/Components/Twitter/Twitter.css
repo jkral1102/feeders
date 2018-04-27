@@ -1,0 +1,9 @@
+#twitter{
+    position: fixed;
+    left: 12em;
+    top: 10em;
+    height: 50%;
+
+    width: 20%;
+    background-color: rgba(133, 49, 133, 0.479);
+}

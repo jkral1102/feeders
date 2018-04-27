@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './Navbar.css';
-import FacebookLogin from "../FacebookLogin";
-//import loginLogo from './loginLogo.png';
 import slogan from './slogan.png';
-import loginbtn from './icon.png';
+import Sidebar from '../Sidebar';
 
 
 class Navbar extends Component {
@@ -11,7 +9,7 @@ class Navbar extends Component {
     super();
 
     this.state = {
-      loginClicked: false
+      settingsClicked: false
     };
 
     this.showLogin = this.showLogin.bind(this);
@@ -19,7 +17,7 @@ class Navbar extends Component {
   }
   showLogin = () => {
     this.setState({
-      loginClicked: !this.state.loginClicked
+      settingsClicked: !this.state.settingsClicked
     });
   }
 
@@ -30,9 +28,9 @@ class Navbar extends Component {
         {/* Logo click - displays Facebook login btn by first setting state to loginClicked: true */}
         <i className="fa fa-cogs test" alt="login" id="loginIcon" onClick={this.showLogin}></i>
 
-        {/* (Conditional Rendering of the Facebook component) - if loginClicked: true, display component */}
-        <div id="fbLogin">
-        {this.state.loginClicked ? <FacebookLogin /> : null}
+        {/* Conditional Rendering of the Sidebar component - if settingsClicked: true, display component */}
+        <div>
+        {this.state.settingsClicked ? <Sidebar /> : null}
         </div>
 
         <div id="sloganDiv">

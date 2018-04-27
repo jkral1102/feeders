@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import './Facebook.css';
-import FacebookProvider, { Login } from 'react-facebook';
+import FacebookProvider, { Login, Like } from 'react-facebook';
 
 class Facebook extends Component {
   handleResponse = (data) => {
@@ -23,6 +23,8 @@ class Facebook extends Component {
             >
               <span>Login via Facebook</span>
             </Login>
+
+            <Like href="http://www.facebook.com" colorScheme="dark" showFaces share />
           </FacebookProvider>
       </div>
     );

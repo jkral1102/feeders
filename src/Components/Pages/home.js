@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from "../Navbar";
+
 import Footer from "../Footer";
-import Twitter from "../Twitter";
+import './home.css';
 
 class HomePage extends Component {
 
@@ -9,7 +10,6 @@ class HomePage extends Component {
     return (
       <div className="App">
         <Navbar /> 
-        <Twitter/>
         <Footer/>
       </div>
     );

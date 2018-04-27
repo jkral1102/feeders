@@ -51,10 +51,10 @@ class Twitter extends Component {
       : null;
 
     return (
-      <div>
+      <div id="twitter">
         <form onSubmit={this.handleSubmit}>
           <label>
-            Search:
+            Search Twitter:
           <input id="twitterInput" type="text" onChange={this.handleChange} placeholder="Search Twitter" />
           </label>
           <input type="submit" value="Submit" />
