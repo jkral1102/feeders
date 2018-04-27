@@ -8,7 +8,6 @@ class UserHomePage extends Component {
     render() {
     return (
       <div className="App">
-       <div className="App">
         <div className="row">
           <div className="col-12">
             <Navbar /> 
@@ -30,9 +29,6 @@ class UserHomePage extends Component {
             <Footer/>
           </div>
         </div>
-      </div>
-        
-          
       </div>
     );
   }
