@@ -4,10 +4,10 @@ import './App.css';
 //importing router for multiple pages
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from './Components/Pages/home';
-import UserHomePage from './Components/Pages/userHome';
 import AboutPage from './Components/Pages/about';
 import SettingsPage from './Components/Pages/settings';
 import SignupPage from './Components/Pages/signup/signup';
+import Login from './Components/Login'
 
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
         <div>
           <Route exact path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />
-          <Route path="/userHome" component={UserHomePage} />
+          <Route path="lLogin" component={Login} />
           <Route path="/settings" component={SettingsPage} />
           <Route path="/signup" component={SignupPage} />
           {/* <Route component={NoMatch} /> */}

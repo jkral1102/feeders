@@ -23,6 +23,8 @@ class HomePage extends Component {
 
 
     render() {
+     {/* if they're not logged in show the splash page and then Modal (onClick) ... 
+    if they are logged in show the components we want on the homepage */}
     return (
       <div className="App splash">
         <div className="row">
@@ -42,7 +44,10 @@ class HomePage extends Component {
           <div className="col-5">
             {/* <button onClick={this.handleClick}>
             {this.state.isToggleOn ? 'Login' : 'OFF'} */}
-            <a href="/userhome" className="link">  Login </a>
+
+            <a href="#" className="link" onclick= "">
+                Login
+            </a>
             <a href="https://www.google.com" className="link"> Sign Up </a>
             {/* </button> */}
           </div>
