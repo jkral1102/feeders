@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./splash/home.css";
 import "./splash/particles.json";
+import Login from "../Login";
 
 
 
@@ -9,7 +10,9 @@ class HomePage extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {isToggleOn: true};
+    this.state = {
+      isToggleOn: false,
+    };
 
     // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);
@@ -45,7 +48,9 @@ class HomePage extends Component {
             {/* <button onClick={this.handleClick}>
             {this.state.isToggleOn ? 'Login' : 'OFF'} */}
 
-            <a href="#" className="link" onclick= "">
+            <a href="#" className="link" onClick={() => {
+              this.setState({ isToggleOn: !this.state.isToggleOn});
+            }}>
                 Login
             </a>
             <a href="https://www.google.com" className="link"> Sign Up </a>
@@ -60,6 +65,7 @@ class HomePage extends Component {
             {/* <h1>Footer</h1> */}
           </div>
           </div>
+          <Login open={this.state.isToggleOn} />
       </div>
         
     );
