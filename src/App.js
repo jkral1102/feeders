@@ -4,10 +4,11 @@ import './App.css';
 //importing router for multiple pages
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from './Components/Pages/home';
-import UserHomePage from './Components/Pages/userHome';
+import UserHomePage from './Components/Pages/userPages';
 import AboutPage from './Components/Pages/about';
 import SettingsPage from './Components/Pages/settings';
 import SignupPage from './Components/Pages/signup/signup';
+import Login from './Components/Login'
 
 
 class App extends Component {

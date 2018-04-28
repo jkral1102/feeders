@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./splash/home.css";
 import "./splash/particles.json";
+import Login from "../Login";
 
 
 
@@ -9,7 +10,9 @@ class HomePage extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {isToggleOn: true};
+    this.state = {
+      isToggleOn: false,
+    };
 
     // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);
@@ -23,6 +26,8 @@ class HomePage extends Component {
 
 
     render() {
+     {/* if they're not logged in show the splash page and then Modal (onClick) ... 
+    if they are logged in show the components we want on the homepage */}
     return (
       <div className="App splash">
         <div className="row">
@@ -42,7 +47,12 @@ class HomePage extends Component {
           <div className="col-5">
             {/* <button onClick={this.handleClick}>
             {this.state.isToggleOn ? 'Login' : 'OFF'} */}
-            <a href="/userhome" className="link">  Login </a>
+
+            <a href="#" className="link" onClick={() => {
+              this.setState({ isToggleOn: !this.state.isToggleOn});
+            }}>
+                Login
+            </a>
             <a href="https://www.google.com" className="link"> Sign Up </a>
             {/* </button> */}
           </div>
@@ -55,6 +65,7 @@ class HomePage extends Component {
             {/* <h1>Footer</h1> */}
           </div>
           </div>
+          <Login open={this.state.isToggleOn} />
       </div>
         
     );
