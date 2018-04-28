@@ -1,91 +1,142 @@
-#navbar {
+.navbar {
     position: sticky;
-    margin-bottom: 30px;
-    width: 100%;
-    height: 10em;
     background-color: #6c42c3;
     font-family: 'Lato', sans-serif;
-    text-align: center;
 }
-
-  #title {
-      font-size: 45px;
-      color: white;
-  }
-.menu{
-    top: 10px;
-    right: 20px;
-    position: absolute;
+.gear {
+    font-size: 150px;
+    color:white;
 }
-
-ul{ 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-ul{ 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-li {
-    float: left;
-    top: 0;
-    position: relative;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    border-right: 1px solid rgba(47, 178, 243, 0.381);
-}
-
-li a:hover {
-    background-color: rgb(10, 101, 248);
-}
-
-#loginIcon{
-    height: 125px;
-    position: absolute;
-    left: 50px;
-    top: 55px;
-    border-radius: 50%;
-    -webkit-transition: -webkit-transform .8s ease-in-out;
-    transition: transform .8s ease-in-out;
-}
-#loginIcon:hover {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-
 #slogan{
     height: 10em;
 }
 
-
-
-/* #fbLogin{
-    background-color: blue;
-    color: white;
-    font-size: 15px;
-    height: 50px;
-    width: auto;
+ul{
+    list-style-type: none;
     overflow: hidden;
-    float: left;
-    line-height: 50px;
-    vertical-align: center;
-    font-family: 'Lato', sans-serif;
-} */
+ }
+ 
+ li {
+    float: right;
+    position: relative;
+ }
+ 
+ li a {
+    display: block;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 100%;
+ }
 
-.test {
-    font-size:60px;
-    color:white;
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1417px) {
+    li a {
+        display: block;
+        color: white;
+        font-size: 35px;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        width: 100%;
+     }
 }
+
+#loginIcon{
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+#loginIcon:hover {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+
+@media only screen and (max-width: 1227px) {
+    li a {
+        display: block;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        width: 100%;
+     }
+     #slogan{
+        height: 7em;
+    }
+}
+
+
+@media only screen and (max-width: 1007px) {
+    li a {
+        display: block;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        width: 100%;
+     }
+     #slogan{
+        height: 7em;
+    }
+}
+ 
+
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (max-width: 950px) {
+    #slogan{
+        height: 6em;
+    }
+
+      .gear {
+        font-size: 90px;
+        color:white;
+    }
+    li a {
+        display: block;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        padding: 14px 14px;
+        text-decoration: none;
+        width: 100%;
+     }
+  }
+
+
+ @media only screen and (max-width: 870px) {
+    /* For mobile phones: */
+    #slogan{
+        height: 6em;
+    }
+    div.links {
+        display: none;
+      }
+      .gear {
+        font-size: 70px;
+        color:white;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    #slogan{
+        height: 5em;
+    }
+    div.links {
+        display: none;
+      }
+      .gear {
+        font-size: 70px;
+        color:white;
+    }
+  }
+
+ 
 

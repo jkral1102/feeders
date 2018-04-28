@@ -22,30 +22,26 @@ class Navbar extends Component {
   }
 
   render() {
+    let sidebar = this.state.settingsClicked ? <Sidebar /> : null
+
     return (
-      <div id="navbar">
-
-        {/* Logo click - displays Facebook login btn by first setting state to loginClicked: true */}
-        <i className="fa fa-cogs test" alt="login" id="loginIcon" onClick={this.showLogin}></i>
-
-        {/* Conditional Rendering of the Sidebar component - if settingsClicked: true, display component */}
-        <div>
-        {this.state.settingsClicked ? <Sidebar /> : null}
+      <div className="row navbar">
+        <div className="col-2 col-s-3">
+          <i className="fa fa-cogs gear" alt="login" id="loginIcon" onClick={this.showLogin} />
         </div>
-
-        <div id="sloganDiv">
-        <img src={slogan} alt="login" id="slogan" onClick={this.showLogin} />
+        
+        <div className="col-5 col-s-9">
+          <img src={slogan} alt="login" id="slogan" onClick={this.showLogin} />
         </div>
-      
-        {/* Navbar links  */}
-        <div className="menu">
+        <div className="col-5  links">
           <ul className="menu-items">
-            <li><a href="/">Home</a></li>
+            
             <li><a href="/about">About</a></li>
             <li><a href="/signup">Sign up</a></li>
+            <li><a href="/">Home</a></li>
           </ul>
         </div>
-
+        {sidebar}
       </div>
     );
   }

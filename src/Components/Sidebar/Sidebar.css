@@ -1,5 +1,5 @@
 .sidebar {
-    margin-top: 10em;
+    margin-top: 11em;
     height: 80%;
     width: 12em;
     position: fixed;
@@ -12,7 +12,8 @@
     padding-top: 60px;
 }
 
-li {
+
+span {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -21,7 +22,11 @@ li {
     transition: 0.3s;
 }
 
-li:hover {
+#tabs {
+    margin: 0 auto;
+}
+
+span:hover {
     color: #f1f1f1;
 }
 

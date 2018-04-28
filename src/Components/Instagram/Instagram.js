@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import './Instagram.css';
-//import InstagramEmbed from 'react-instagram-embed'
-//import InstagramLogin from 'react-instagram-login'
-import InstagramAPI from 'instagram-api'
-
-
+import InstagramEmbed from 'react-instagram-embed'
+//  var key = '4108368018.1677ed0.8ce16b5c16ae4909b1772d4d9818db76'
 
 class Instagram extends Component {
     
@@ -12,19 +9,21 @@ class Instagram extends Component {
         super();
     
         this.state = {
-          search: "",
-          searchClick: false
+          searchClick: false,
+          userURL: "",
+          searchURL: 'https://www.instagram.com/joerogan/?hl=en'
+          
         };
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.instagramLogin = this.instagramLogin.bind(this);
+        this.showInstagram = this.showInstagram.bind(this);
       }
     
     
     handleChange(event) {
         this.setState({
-            search: event.target.value
+            userURL: event.target.value
         });
       }
 
@@ -33,55 +32,48 @@ class Instagram extends Component {
         this.setState({
           searchClick: !this.state.searchClick
         });
-        this.instagramLogin();
+        this.showInstagram();
       }
 
-    instagramLogin() {
-        var key = '4108368018.1677ed0.8ce16b5c16ae4909b1772d4d9818db76'
-        
-        var instagramAPI = new InstagramAPI(key);
+    showInstagram() {
+        // var url = this.state.url ? this.state.url : 'https://www.instagram.com/joerogan/?hl=en'
+//         this.setState({ searchURL: "" })
 
-        instagramAPI.userSearch().then(function(result) {
-            console.log(result.data); // user info 
-            console.log(result.limit); // api limit 
-            console.log(result.remaining) // api request remaining 
-        }, function(err){
-            console.log(err); // error info 
-        });
+       
+//             if (this.state.userURL > 0) {
+//                 this.setState({ searchURL: this.state.userURL })
+// }
+        return(
+            <div id="instagram">
+            <InstagramEmbed
+            url='https://instagr.am/p/Zw9o4/'
+            maxWidth={320}
+            hideCaption={false}
+            containerTagName='div'
+            protocol=''
+            onLoading={() => {}}
+            onSuccess={() => {}}
+            onAfterRender={() => {}}
+            onFailure={() => {}}
 
+        />
+        </div>
+        )
     }
 
-    render() {
-        // let InstagramLogin = function() {
-        //         var accessToken = '4108368018.1677ed0.8ce16b5c16ae4909b1772d4d9818db76'
-                
-        //         var instagramAPI = new InstagramAPI(accessToken);
-        
-        //         instagramAPI.userSelf().then(function(result) {
-        //             console.log(result.data); // user info 
-        //             console.log(result.limit); // api limit 
-        //             console.log(result.remaining) // api request remaining 
-        //         }, function(err){
-        //             console.log(err); // error info 
-        //         });
-            
-        
+render() {
+//     <form onSubmit={this.handleSubmit}>
+//     <input id="instagramInput" type="text" onChange={this.handleChange} placeholder="Embed an Instagram url" />
+//     <input type="submit" value="Submit" />
+// </form>
+    return (
 
-                    // <div id="instagramFeed">
-            //   <InstagramLogin />
-        return (
-            <div>
+        <div id="instagram">
 
-            <form onSubmit={this.handleSubmit}>
-            <label>
-              Search Instagram:
-            <input id="instagramInput" type="text" onChange={this.handleChange} placeholder="Search Instagram" />
-            </label>
-            <input type="submit" value="Submit" />
-          </form>
-{this.instagramLogin()}
-            </div>
-        );
+
+        {this.showInstagram()}
+        </div>
+    );
     }
 }
 

@@ -48,11 +48,13 @@ class Sidebar extends Component {
   render() {
     return (
       <div className="sidebar">
-        <li onClick={this.clickTwitter}>Twitter</li>
-        <li onClick={this.clickInstagram}>Instagram</li>
+      <div id="tabs">
+        <span onClick={this.clickTwitter}>Twitter</span>
+        <span onClick={this.clickInstagram}>Instagram</span>
 
         {this.showTwitter()}
         {this.showInstagram()}
+        </div>
     </div>
     );
   }
