@@ -1,34 +1,38 @@
 import React, { Component } from 'react';
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import Twitter from "../Twitter";
+
 
 class UserHomePage extends Component {
 
     render() {
+
+  //     <div className="row">
+  //     <div className="col-12">
+  //       <Navbar /> 
+  //     </div>
+  //   </div>
+  //   <div className="row">
+  //     <div className="col-2">
+      
+  //     </div>
+  //     <div className="col-8">
+       
+  //     </div>
+  //     <div className="col-2">
+      
+  //     </div>
+  //   </div>
+  //   <div className="row"> 
+  //     <div className="col-12">
+  //       <Footer/>
+  //     </div>
+  //   </div>
+  // </div>
     return (
       <div className="App">
-        <div className="row">
-          <div className="col-12">
-            <Navbar /> 
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-2">
-          
-          </div>
-          <div className="col-8">
-            <Twitter/>
-          </div>
-          <div className="col-2">
-          
-          </div>
-        </div>
-        <div className="row"> 
-          <div className="col-12">
-            <Footer/>
-          </div>
-        </div>
+        <Navbar/>
+        <Footer/>
       </div>
     );
   }

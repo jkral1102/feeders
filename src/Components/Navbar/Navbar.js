@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './Navbar.css';
-import FacebookLogin from "../FacebookLogin";
-//import loginLogo from './loginLogo.png';
 import slogan from './slogan.png';
-import loginbtn from './icon.png';
+import Sidebar from '../Sidebar';
 
 
 class Navbar extends Component {
@@ -11,7 +9,7 @@ class Navbar extends Component {
     super();
 
     this.state = {
-      loginClicked: false
+      settingsClicked: false
     };
 
     this.showLogin = this.showLogin.bind(this);
@@ -19,16 +17,19 @@ class Navbar extends Component {
   }
   showLogin = () => {
     this.setState({
-      loginClicked: !this.state.loginClicked
+      settingsClicked: !this.state.settingsClicked
     });
   }
 
   render() {
+    let sidebar = this.state.settingsClicked ? <Sidebar /> : null
+
     return (
       <div className="row navbar">
         <div className="col-2 col-s-3">
           <i className="fa fa-cogs gear" alt="login" id="loginIcon" onClick={this.showLogin} />
         </div>
+        
         <div className="col-5 col-s-9">
           <img src={slogan} alt="login" id="slogan" onClick={this.showLogin} />
         </div>
@@ -40,6 +41,7 @@ class Navbar extends Component {
             <li><a href="/">Home</a></li>
           </ul>
         </div>
+        {sidebar}
       </div>
     );
   }

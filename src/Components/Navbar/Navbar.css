@@ -2,7 +2,6 @@
     position: sticky;
     background-color: #6c42c3;
     font-family: 'Lato', sans-serif;
-    
 }
 .gear {
     font-size: 150px;
@@ -29,13 +28,9 @@ ul{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-   
     width: 100%;
  }
- 
- li a:hover {
-    
- }
+
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1417px) {
@@ -49,6 +44,17 @@ ul{
         width: 100%;
      }
 }
+
+#loginIcon{
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+#loginIcon:hover {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
 
 @media only screen and (max-width: 1227px) {
     li a {
@@ -64,6 +70,7 @@ ul{
         height: 7em;
     }
 }
+
 
 @media only screen and (max-width: 1007px) {
     li a {
@@ -86,9 +93,7 @@ ul{
     #slogan{
         height: 6em;
     }
-    div.links {
-        
-      }
+
       .gear {
         font-size: 90px;
         color:white;

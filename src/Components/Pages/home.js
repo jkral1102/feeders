@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-import Cards from "../Cards";
-import Twitter from "../Twitter";
 import "./splash/home.css";
 import "./splash/particles.json";
-
-import RaisedButton from 'material-ui/RaisedButton';
 
 
 
@@ -49,7 +43,7 @@ class HomePage extends Component {
             {/* <button onClick={this.handleClick}>
             {this.state.isToggleOn ? 'Login' : 'OFF'} */}
             <a href="/userhome" className="link">  Login </a>
-            <a href="#" className="link"> Sign Up </a>
+            <a href="https://www.google.com" className="link"> Sign Up </a>
             {/* </button> */}
           </div>
           <div className="col-1">

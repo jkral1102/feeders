@@ -10,12 +10,6 @@ import SettingsPage from './Components/Pages/settings';
 import SignupPage from './Components/Pages/signup/signup';
 
 
-// All components 
-import Cards from "./Components/Cards";
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
-import Twitter from "./Components/Twitter";
-
 class App extends Component {
   render() {
     return (
