@@ -1,0 +1,36 @@
+.splash { 
+    background: linear-gradient(to right, rgba(186,153,255,1), rgba(108, 66, 195,1));
+    height: 100vh;
+} 
+
+.size {
+    height: 30%;
+    padding: 60px;
+}
+
+h2 {
+    font-size: 100px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+
+}
+
+p {
+    font-size: 24px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    
+}
+.link {
+    margin: auto;
+    padding: 500px 15px;
+    font-size: 50px;
+    color: white;
+    font-family: 'Lato', sans-serif; 
+
+}
+
+.link:hover {
+    text-decoration: none; 
+}
+
