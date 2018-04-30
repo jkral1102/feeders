@@ -1,27 +1,30 @@
 import React, { Component } from 'react';
-import './App.css';
+//import './App.css';
 
 //importing router for multiple pages
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import HomePage from './Components/Pages/home';
-import UserHomePage from './Components/Pages/userPages';
-import AboutPage from './Components/Pages/about';
-import SettingsPage from './Components/Pages/settings';
-import SignupPage from './Components/Pages/signup/signup';
-import Login from './Components/Login'
+
+import HomePage from './Pages/home';
+import AboutPage from './Pages/about';
+import SettingsPage from './Pages/settings';
+
+//import SignupPage from './Pages/signup/signup'; - Need to change into a component 
+//import Login from './Components/Login'
+//import UserHomePage from './Pages/userPages';
 
 
 class App extends Component {
   render() {
     return (
       //creating router to have multiple pages
+      // <Route path="/userhome" component={UserHomePage} /> - Chang
+      //<Route path="/signup" component={SignupPage} />
       <Router>
-        <div>
+        <div className="App">
           <Route exact path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />
-          <Route path="/userHome" component={UserHomePage} />
           <Route path="/settings" component={SettingsPage} />
-          <Route path="/signup" component={SignupPage} />
+          
           {/* <Route component={NoMatch} /> */}
         </div>
       </Router>
@@ -31,12 +34,12 @@ class App extends Component {
   }
 }
 
-const NoMatch = ({ location }) => (
-  <div>
-    <h3>
-      No match for <code>{location.pathname}</code>
-    </h3>
-  </div>
-);
+// const NoMatch = ({ location }) => (
+//   <div>
+//     <h3>
+//       No match for <code>{location.pathname}</code>
+//     </h3>
+//   </div>
+// );
 
 export default App;
