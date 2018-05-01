@@ -7,6 +7,7 @@
     "axios": "^0.18.0",
     "babel-plugin-import": "^1.7.0",
     "classnames": "^2.2.5",
+    "fetch": "^1.1.0",
     "instagram-api": "^1.0.3",
     "lodash": "^4.17.10",
     "material-ui": "^1.0.0-beta.43",
