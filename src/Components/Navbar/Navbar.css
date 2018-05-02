@@ -52,8 +52,8 @@ ul{
 }
 
 #loginIcon:hover {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
 
 @media only screen and (max-width: 1227px) {

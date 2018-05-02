@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import './Youtube.css'
 //api key = AIzaSyCPhwbf5bXmhAJ0qawFjlNLaaNPLXPevvc
 //import axios from 'axios'
-import YouTube from 'react-youtube'
+import YoutubeList from '../YoutubeList'
+import logo from './youtube.png'
+import YoutubeRender from '../YoutubeRender'
 
 
 class Youtubes extends Component {
@@ -13,54 +15,16 @@ class Youtubes extends Component {
         search: "",
         youtubeSearch: "",
         searchClick: false,
-        videoID: "",
-        video: []
-
-    };
+        videos: [],
+        videoClicked: false,
+        videoID: ""
+        }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.VideoList = this.VideoList.bind(this);
+    this.handleVideoClick = this.handleVideoClick.bind(this);
   }
-  VideoList() {
-    fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyCPhwbf5bXmhAJ0qawFjlNLaaNPLXPevvc&part=snippet,id&order=date&maxResults=20')
-      .then(resp => resp.json())
-      .then((resp) => {
-        //console.log(resp);
-        //this.setState({video: resp.results});
-        this.setState({video: resp.items});
-        console.log(this.state.video);
-        this.renderVideo()
-      });
-    }
 
-    renderVideo() {
-      const opts = {
-        height: '390',
-        width: '640',
-        playerVars: { // https://developers.google.com/youtube/player_parameters
-          autoplay: 1
-        }
-      };
-      this.state.video.forEach((element, index) => {
-        //console.log(item);
-        this.setState({
-            videoID: element.id.videoId
-          });
-          console.log(this.state.videoID);
-          //alert(this.state.videoID);
-      })
-      // this.state.videoID.map((element, index) => {
-      // return (
-      //   <YouTube
-      //     videoID=element
-      //     opts={opts}
-      //     onReady={this._onReady}
-      //   />
-      // );
-    //})
-  }
-    
   handleChange(event) {
     this.setState({
       search: event.target.value,
@@ -71,33 +35,54 @@ class Youtubes extends Component {
   handleSubmit(event) {
     event.preventDefault();
     this.setState({
-      searchClick: !this.state.searchClick
+      searchClick: !this.state.searchClick,
     });
     // Youtube ajax request for search!
-    this.VideoList();
+    this.searchYoutube(this.state.search);
   }
 
-  render() {
-    // Conditionally render twitter if twitter search button was clicked
-    // let YoutubeFeed = this.state.searchClick === true ?
-    //     <YouTube
-    //     videoId={this.state.videoId}
-    //     opts={opts}
-    //     onReady={this._onReady}
-    //     />
-    //     : null;
-    //     {YoutubeFeed}
+  handleVideoClick(id) {
+    this.setState({
+      videoClicked: true,
+      videoID: id
+    })
+  }
 
+
+  searchYoutube(search) {
+    fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyCPhwbf5bXmhAJ0qawFjlNLaaNPLXPevvc&part=snippet,id&order=date&maxResults=20&q=' + search)
+      .then(resp => resp.json())
+      .then((resp) => {
+        console.log(resp);
+        this.setState({videos: resp.items});
+      });
+    }
+
+  render() {
     return (
-      <div>
+      <div id="youtube">
+       
+
         <form onSubmit={this.handleSubmit}>
+        <a href='https://www.youtube.com'><img src={logo} alt="" /></a>
             <input id="youtubeInput" type="text" onChange={this.handleChange} placeholder="Search Youtube" />
           <input type="submit" value="Submit" />
         </form>
-   
+
+        <div className="thumbnails">
 
 
-      {this.renderVideo}
+    {this.state.videoClicked ? <YoutubeRender videoID={this.state.videoID}/> : null}    
+
+        {this.state.videos.map(vid => {
+          return <YoutubeList
+            image={vid.snippet.thumbnails.default.url}
+            title={vid.snippet.title}
+            videoID={this.state.videoID}
+            handleVideoClick={this.handleVideoClick}
+          />
+        })}
+        </div>
 
       </div>
     );
