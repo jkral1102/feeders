@@ -23,7 +23,7 @@ const styles = {
   },
 };
 
-class Login extends React.Component {
+class Signup extends React.Component {
   handleClose = () => {
     this.props.onClose(this.props.selectedValue);
   };
@@ -105,4 +105,4 @@ class LoginDemo extends React.Component {
   }
 }
 
-export default Login;
+export default Signup;
