@@ -17,9 +17,7 @@ class Sidebar extends Component {
         this.clickTwitter = this.clickTwitter.bind(this);
         this.clickInstagram = this.clickInstagram.bind(this);
         this.clickYoutube = this.clickYoutube.bind(this);
-        this.showInstagram = this.showInstagram.bind(this);
-        this.showTwitter = this.showTwitter.bind(this);
-        this.showYoutube = this.showYoutube.bind(this);
+    
     }
 
     clickTwitter = () => {
@@ -34,30 +32,6 @@ class Sidebar extends Component {
         this.setState({ youtube: !this.state.youtube });
     }
 
-    showTwitter() {
-        if (this.state.twitter === true) {
-            return (
-                <Twitter />
-            )
-        }
-    }
-    showInstagram() {
-        if (this.state.instagram === true) {
-            return (
-                <Instagram />
-            )
-        }
-    }
-
-    showYoutube() {
-        if (this.state.youtube === true) {
-            return (
-                <Youtube />
-            )
-        }
-    }
-
-
 
     render() {
         return (
@@ -66,9 +40,9 @@ class Sidebar extends Component {
                     <span onClick={this.clickTwitter}>Twitter</span>
                     <span onClick={this.clickInstagram}>Instagram</span>
                     <span onClick={this.clickYoutube}>Youtube</span>
-                    {this.showTwitter()}
-                    {this.showInstagram()}
-                    {this.showYoutube()}
+                    {this.state.twitter ? <Twitter /> : null}
+                    {this.state.instagram ? <Instagram /> : null}
+                    {this.state.youtube ? <Youtube /> : null}
                 </div>
             </div>
         );
