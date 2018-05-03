@@ -19,11 +19,9 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-<<<<<<< HEAD
     "express": "^4.15.4",
     "material-ui": "^0.20.0",
     "mongoose": "^5.0.16",
-=======
     "babel-plugin-import": "^1.7.0",
     "classnames": "^2.2.5",
     "fetch": "^1.1.0",
@@ -40,7 +38,6 @@
     "react-instagram-login": "^1.2.0",
     "react-modal": "^3.4.1",
     "react-oauth2": "^1.0.2",
->>>>>>> master
     "react-router-dom": "^4.2.2",
     "react-scripts": "^1.1.4",
     "react-tap-event-plugin": "^3.0.2"
