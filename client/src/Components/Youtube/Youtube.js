@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import './Youtube.css'
 //api key = AIzaSyCPhwbf5bXmhAJ0qawFjlNLaaNPLXPevvc
-import axios from 'axios'
-import Youtube from 'react-youtube'
+//import axios from 'axios'
+import YoutubeList from '../YoutubeList'
+import logo from './youtube.png'
+import YoutubeRender from '../YoutubeRender'
 
 
-class Youtube extends Component {
+class Youtubes extends Component {
   constructor() {
     super();
 
@@ -13,14 +15,15 @@ class Youtube extends Component {
         search: "",
         youtubeSearch: "",
         searchClick: false,
-        videoId: ""
-
-    };
+        videos: [],
+        videoClicked: false,
+        videoID: ""
+        }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleVideoClick = this.handleVideoClick.bind(this);
   }
-
 
   handleChange(event) {
     this.setState({
@@ -32,86 +35,54 @@ class Youtube extends Component {
   handleSubmit(event) {
     event.preventDefault();
     this.setState({
-      searchClick: !this.state.searchClick
+      searchClick: !this.state.searchClick,
     });
-    
     // Youtube ajax request for search!
-    searchNew(search);
-
-
+    this.searchYoutube(this.state.search);
   }
 
-searchNew = (search) => {
-    // var authKey = "AIzaSyCPhwbf5bXmhAJ0qawFjlNLaaNPLXPevvc";
-    // var apiURL = "https://www.googleapis.com/youtube/v3/search" + "&part=snippet" + "&key=" + authKey  + "&q=" + search
-    // // "https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?
-    // // &part=snippet&order=viewCount&type=video&videoDefinition=high&q=" + search
+  handleVideoClick(id) {
+    this.setState({
+      videoClicked: true,
+      videoID: id
+    })
+  }
 
-    // var authOptions = {
-    //     "async": true,
-    //     method: 'GET',
-    //     url: queryURL,
-    //     dataType: 'json'
-    //   };
 
-      function searchByKeyword() {
-        var results = YouTube.Search.list('id,snippet', {q: 'dogs', maxResults: 25});
-      
-        for(var i in results.items) {
-          var item = results.items[i];
-          Logger.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
-        }
-      }
-      // axios.get(searchByKeyword)
-// axios.get(apiURL, authOptions)
-      // .then(function(response) {
-        // console.log(response)
-      // })
-      // .catch(function (error) {
-      //   console.log(error);
-      // });
+  searchYoutube(search) {
+    fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyCPhwbf5bXmhAJ0qawFjlNLaaNPLXPevvc&part=snippet,id&order=date&maxResults=20&q=' + search)
+      .then(resp => resp.json())
+      .then((resp) => {
+        console.log(resp);
+        this.setState({videos: resp.items});
+      });
     }
 
-
-// return axios(authOptions)
-// .then((response) => {
-//   // grab relevant response data
-//   //var data = response.data;
-//   var data = response.data
-// //   this.setState({
-// //     youtubeSearch: data
-// //   })
-//   console.log(data);
-// })
-// .catch((error) => {
-//   console.log(error);
-// });
-// }
-
-
-
-
-
   render() {
-    // Conditionally render twitter if twitter search button was clicked
-    let YoutubeFeed = this.state.searchClick === true ?
-        <YouTube
-        videoId={this.state.videoId}
-        opts={opts}
-        onReady={this._onReady}
-        />
-        : null;
-
     return (
-      <div>
+      <div id="youtube">
+       
+
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Search Youtube:
+        <a href='https://www.youtube.com'><img src={logo} alt="" /></a>
             <input id="youtubeInput" type="text" onChange={this.handleChange} placeholder="Search Youtube" />
-          </label>
           <input type="submit" value="Submit" />
         </form>
-        {YoutubeFeed}
+
+        <div className="thumbnails">
+
+
+    {this.state.videoClicked ? <YoutubeRender videoID={this.state.videoID}/> : null}    
+
+        {this.state.videos.map(vid => {
+          return <YoutubeList
+            image={vid.snippet.thumbnails.default.url}
+            title={vid.snippet.title}
+            videoID={this.state.videoID}
+            handleVideoClick={this.handleVideoClick}
+          />
+        })}
+        </div>
 
       </div>
     );
@@ -119,4 +90,4 @@ searchNew = (search) => {
 }
 
 
-export default Youtube;
+export default Youtubes;
