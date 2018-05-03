@@ -13,7 +13,7 @@ import Typography from 'material-ui/Typography';
 import blue from 'material-ui/colors/blue';
 
 //import props from form.js
-import Form from './form';
+import Form from '../Form';
 
 const emails = ['username@gmail.com', 'user02@gmail.com'];
 const styles = {

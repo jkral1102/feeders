@@ -7,72 +7,46 @@ import Youtube from "../Youtube";
 class Sidebar extends Component {
     constructor() {
         super();
-    
+
         this.state = {
-          twitter: false,
-          instagram: false,
-          youtube: false
+            twitter: false,
+            instagram: false,
+            youtube: false
         };
-    
+
         this.clickTwitter = this.clickTwitter.bind(this);
         this.clickInstagram = this.clickInstagram.bind(this);
         this.clickYoutube = this.clickYoutube.bind(this);
-        this.showInstagram = this.showInstagram.bind(this);
-        this.showTwitter = this.showTwitter.bind(this);
-        this.showYoutube = this.showYoutube.bind(this);
     
-      }
-
-      clickTwitter = () => {
-        this.setState({ twitter: !this.state.twitter }); 
-
-        }
-
-      clickInstagram = () => { this.setState({ instagram: !this.state.instagram }); 
-        }
-
-        clickYoutube = () => { this.setState({ youtube: !this.state.youtube }); 
     }
 
-        showTwitter() {
-            if(this.state.twitter === true) {
-                return (
-                    <Twitter />
-                )
-        }
+    clickTwitter = () => {
+        this.setState({ twitter: !this.state.twitter });
     }
-    showInstagram() {
-        if(this.state.instagram === true) {
-            return (
-                <Instagram />
-            )
-    }
-}
 
-showYoutube() {
-    if(this.state.youtube === true) {
+    clickInstagram = () => {
+        this.setState({ instagram: !this.state.instagram });
+    }
+
+    clickYoutube = () => {
+        this.setState({ youtube: !this.state.youtube });
+    }
+
+
+    render() {
         return (
-            <Youtube />
-        )
-}
-}
-
-    
-
-  render() {
-    return (
-      <div className="sidebar">
-      <div id="tabs">
-        <span onClick={this.clickTwitter}>Twitter</span>
-        <span onClick={this.clickInstagram}>Instagram</span>
-        <span onClick={this.clickYoutube}>Youtube</span>
-        {this.showTwitter()}
-        {this.showInstagram()}
-        {this.showYoutube()}
-        </div>
-    </div>
-    );
-  }
+            <div className="sidebar">
+                <div id="tabs">
+                    <span onClick={this.clickTwitter}>Twitter</span>
+                    <span onClick={this.clickInstagram}>Instagram</span>
+                    <span onClick={this.clickYoutube}>Youtube</span>
+                    {this.state.twitter ? <Twitter /> : null}
+                    {this.state.instagram ? <Instagram /> : null}
+                    {this.state.youtube ? <Youtube /> : null}
+                </div>
+            </div>
+        );
+    }
 }
 
 export default Sidebar;
