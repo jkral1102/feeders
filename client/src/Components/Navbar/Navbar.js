@@ -22,8 +22,6 @@ class Navbar extends Component {
   }
 
   render() {
-    let sidebar = this.state.settingsClicked ? <Sidebar /> : null
-
     return (
       <div className="row navbar">
         <div className="col-2 col-s-3">
@@ -41,7 +39,7 @@ class Navbar extends Component {
             <li><a href="/">Home</a></li>
           </ul>
         </div>
-        {sidebar}
+        {this.state.settingsClicked ? <Sidebar /> : null}
       </div>
     );
   }

@@ -27,29 +27,28 @@ class HomePage extends Component {
 
 
 
-    render() {
-      if (this.state.hasError) {
-        // You can render any custom fallback UI
-        return <h1>Something went wrong.</h1>;
-      }
+  render() {
+    if (this.state.hasError) {
+      // You can render any custom fallback UI
+      return <h1>Something went wrong.</h1>;
+    }
     //  {/* if they're not logged in show the splash page and then Modal (onClick) ... 
     // if they are logged in show the components we want on the homepage */}
 
-    let showPage = this.state.loggedIn ? 
-          <div> 
-              <Navbar /> 
-              
-              <Sidebar />
-              <Footer/> 
-          </div> 
-          : <Splash />
+    let showPage = this.state.loggedIn ?
+      <div>
+        <Navbar />
+        <Sidebar />
+        <Footer />
+      </div>
+      : <Splash />
 
     return (
       <div className="App">
         {showPage}
 
       </div>
-        
+
     );
   }
 }
