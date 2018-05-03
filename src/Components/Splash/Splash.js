@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './Splash.css'
 import Login from "../Login";
-import SignupPage from "../../Pages/signup/signup";
 import "./particles.json";
 
 
@@ -22,8 +21,7 @@ class Splash extends Component {
           isToggleOn: !this.state.isToggleOn
         });
       }
-
-    
+   
 
   render() {
    
@@ -48,7 +46,7 @@ class Splash extends Component {
           <a href="#" className="link" onClick={this.handleClick}>
               Login
           </a>
-          <a href="/Pages/signup/signup" className="link" onClick={}> Sign Up </a>
+          <a href="#" className="link"> Sign Up </a>
         
         </div>
         <div className="col-1">
@@ -61,7 +59,6 @@ class Splash extends Component {
         </div>
         </div>
         <Login open={this.state.isToggleOn} />
-        <SignupPage />
       </div>
     );
   }

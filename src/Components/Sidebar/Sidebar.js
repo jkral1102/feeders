@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Sidebar.css';
 import Instagram from "../Instagram";
 import Twitter from "../Twitter";
-
+import Youtube from "../Youtube";
 
 class Sidebar extends Component {
     constructor() {
@@ -10,13 +10,16 @@ class Sidebar extends Component {
     
         this.state = {
           twitter: false,
-          instagram: false
+          instagram: false,
+          youtube: false
         };
     
         this.clickTwitter = this.clickTwitter.bind(this);
         this.clickInstagram = this.clickInstagram.bind(this);
+        this.clickYoutube = this.clickYoutube.bind(this);
         this.showInstagram = this.showInstagram.bind(this);
         this.showTwitter = this.showTwitter.bind(this);
+        this.showYoutube = this.showYoutube.bind(this);
     
       }
 
@@ -27,6 +30,9 @@ class Sidebar extends Component {
 
       clickInstagram = () => { this.setState({ instagram: !this.state.instagram }); 
         }
+
+        clickYoutube = () => { this.setState({ youtube: !this.state.youtube }); 
+    }
 
         showTwitter() {
             if(this.state.twitter === true) {
@@ -43,6 +49,14 @@ class Sidebar extends Component {
     }
 }
 
+showYoutube() {
+    if(this.state.youtube === true) {
+        return (
+            <Youtube />
+        )
+}
+}
+
     
 
   render() {
@@ -51,9 +65,10 @@ class Sidebar extends Component {
       <div id="tabs">
         <span onClick={this.clickTwitter}>Twitter</span>
         <span onClick={this.clickInstagram}>Instagram</span>
-
+        <span onClick={this.clickYoutube}>Youtube</span>
         {this.showTwitter()}
         {this.showInstagram()}
+        {this.showYoutube()}
         </div>
     </div>
     );
