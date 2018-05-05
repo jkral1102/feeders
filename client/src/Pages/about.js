@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import "../aboutPage/about.css";
 
 class AboutPage extends Component {
 
     render() {
     return (
+      <div id="container">
+        <div id="leftContainer"></div> // style to have width=50%
+        <div id="rightContainer"></div> 
+      </div>
+
+
       <div className="App">
       <Navbar />
 
