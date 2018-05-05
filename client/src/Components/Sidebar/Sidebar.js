@@ -11,7 +11,7 @@ class Sidebar extends Component {
         this.state = {
             twitter: false,
             instagram: false,
-            youtube: false
+            youtube: false,
         };
 
         this.clickTwitter = this.clickTwitter.bind(this);
@@ -31,6 +31,7 @@ class Sidebar extends Component {
     clickYoutube = () => {
         this.setState({ youtube: !this.state.youtube });
     }
+
 
 
     render() {

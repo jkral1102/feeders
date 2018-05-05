@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Splash from "../Components/Splash";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import Sidebar from "../Components/Sidebar";
+// import Sidebar from "../Components/Sidebar";
 //import Google from "../Components/Google";
 import './home.css';
 
@@ -38,7 +38,6 @@ class HomePage extends Component {
     let showPage = this.state.loggedIn ?
       <div>
         <Navbar />
-        <Sidebar />
         <Footer />
       </div>
       : <Splash />

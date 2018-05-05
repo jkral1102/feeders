@@ -5,27 +5,40 @@ import Sidebar from '../Sidebar';
 
 
 class Navbar extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      settingsClicked: false
+      settingsClicked: false,
+      toggleSidebar: false
     };
 
     this.showLogin = this.showLogin.bind(this);
-
+    this.toggleVisibility = this.toggleVisibility.bind(this);
   }
   showLogin = () => {
     this.setState({
       settingsClicked: !this.state.settingsClicked
     });
   }
+  toggleVisibility = () => {
+    if(this.state.toggleSidebar === true){
+      this.setState({
+        toggleSidebar: false
+      });
+    } else{
+      this.setState({
+        toggleSidebar: true
+      });
+    }
+  };
 
   render() {
+    const { visible } = this.state
     return (
       <div className="row navbar">
         <div className="col-2 col-s-3">
-          <i className="fa fa-cogs gear" alt="login" id="loginIcon" onClick={this.showLogin} />
+          <i className="fa fa-cogs gear" alt="login" id="loginIcon" onClick={this.toggleVisibility} />
         </div>
         
         <div className="col-5 col-s-9">
@@ -39,7 +52,7 @@ class Navbar extends Component {
             <li><a href="/">Home</a></li>
           </ul>
         </div>
-        {this.state.settingsClicked ? <Sidebar /> : null}
+        {this.state.toggleSidebar ? <Sidebar /> : null}
       </div>
     );
   }
