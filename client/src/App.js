@@ -8,9 +8,9 @@ import HomePage from './Pages/home';
 import AboutPage from './Pages/about';
 import SettingsPage from './Pages/settings';
 
-//import SignupPage from './Pages/signup/signup'; - Need to change into a component 
-//import Login from './Components/Login'
-//import UserHomePage from './Pages/userPages';
+//import LoginPage from './Pages/login';
+//import SignupPage from './Pages/signup';
+
 
 
 class App extends Component {
