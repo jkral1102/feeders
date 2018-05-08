@@ -48,7 +48,7 @@ class Navbar extends Component {
           <ul className="menu-items">
             
             <li><a href="/about">About</a></li>
-            <li><a href="/signup">Sign up</a></li>
+            {/* <li><a href="/signup">Sign up</a></li> */}
             <li><a href="/">Home</a></li>
           </ul>
         </div>

@@ -42,10 +42,10 @@ class Splash extends Component {
         </div>
         <div className="col-5">
 
-          <a href="#" className="link" onClick={this.handleClick}>
+          <a href="/home" className="link" onClick={this.handleClick}>
               Login
           </a>
-          <a href="#" className="link"> Sign Up </a>
+          <a href="/signup" className="link" onClick={this.handleClick}> Sign Up </a>
         
         </div>
         <div className="col-1">

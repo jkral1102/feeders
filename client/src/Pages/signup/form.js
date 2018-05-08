@@ -2,7 +2,7 @@ import React from "react";
 import TextField from "material-ui/TextField";
 import Button from "material-ui/Button";
 
-export default class Form extends React.Component {
+class Form extends React.Component {
   state = {
     firstName: "",
     firstNameError: "",
@@ -138,3 +138,5 @@ export default class Form extends React.Component {
     );
   }
 }
+
+export default Form; 

@@ -12,7 +12,7 @@ class HomePage extends Component {
   constructor() {
     super();
     this.state = {
-      loggedIn: true,
+      loggedIn: false,
       hasError: false
     };
   }

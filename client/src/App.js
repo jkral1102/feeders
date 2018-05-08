@@ -9,7 +9,7 @@ import AboutPage from './Pages/about';
 import SettingsPage from './Pages/settings';
 
 //import LoginPage from './Pages/login';
-//import SignupPage from './Pages/signup';
+import SignupPage from './Pages/signup/signup';
 
 
 
@@ -17,13 +17,14 @@ class App extends Component {
   render() {
     return (
       //creating router to have multiple pages
-      // <Route path="/userhome" component={UserHomePage} /> - Chang
-      //<Route path="/signup" component={SignupPage} />
+ 
       <Router>
         <div className="App">
           <Route exact path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />
           <Route path="/settings" component={SettingsPage} />
+          <Route path="/signup" component={SignupPage} />
+
           
           {/* <Route component={NoMatch} /> */}
         </div>
