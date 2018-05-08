@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
-//import React from "react";
 import './YoutubeList.css'
-import YoutubeRender from '../YoutubeRender'
 
-
-//const YoutubeList = props => (
 class YoutubeList extends Component {
     constructor(props) {
         super(props);
@@ -15,8 +11,7 @@ class YoutubeList extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick() {
-
-        {this.props.handleVideoClick(this.props.videoID)}
+        this.props.handleVideoClick(this.props.videoID)
     }
     render() {
 

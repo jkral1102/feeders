@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import Splash from "../Components/Splash";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-// import Sidebar from "../Components/Sidebar";
-//import Google from "../Components/Google";
+import Sidebar from "../Components/Sidebar";
 import './home.css';
-
+import Youtube from "../Components/Youtube";
+import Instagram from "../Components/Instagram";
+import Twitter from "../Components/Twitter";
 
 
 class HomePage extends Component {
@@ -13,7 +14,11 @@ class HomePage extends Component {
     super();
     this.state = {
       loggedIn: true,
-      hasError: false
+      hasError: false,
+      sidebar: false,
+      youtube: false,
+      instagram: false,
+      twitter: false
     };
   }
 
@@ -24,28 +29,53 @@ class HomePage extends Component {
     console.log(error, info);
   }
 
+  showSidebar() {
+    this.setState({ sidebar: !this.state.sidebar })
+  }
 
-
+  showYoutube() {
+    this.setState({ youtube: !this.state.youtube })
+  }
+  showInstagram() {
+    this.setState({ instagram: !this.state.instagram })
+  }
+  showTwitter() {
+    this.setState({ twitter: !this.state.twitter })
+  }
 
   render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI
       return <h1>Something went wrong.</h1>;
     }
-    //  {/* if they're not logged in show the splash page and then Modal (onClick) ... 
-    // if they are logged in show the components we want on the homepage */}
-
-    let showPage = this.state.loggedIn ?
-      <div>
-        <Navbar />
-        <Footer />
-      </div>
-      : <Splash />
-
     return (
       <div className="App">
-        {showPage}
+      
+        {this.state.loggedIn ?
+          <div>
+            <Navbar sidebar={this.showSidebar.bind(this)} />
+            <Footer />
+          </div>
+          : <div>
+            <Splash />
+          </div>
+        }
+<div id="feeds">
+        {this.state.sidebar ?
+          <Sidebar
+            youtube={this.showYoutube.bind(this)}
+            instagram={this.showInstagram.bind(this)}
+            twitter={this.showTwitter.bind(this)}
+          /> : null}
 
+        {this.state.youtube ?
+          <Youtube /> : null}
+
+        {this.state.instagram ?
+          <Instagram /> : null}
+
+        {this.state.twitter ?
+          <Twitter /> : null}
+          </div>
       </div>
 
     );

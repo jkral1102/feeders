@@ -13,7 +13,7 @@ class Footer extends Component {
 
     render() {
         return (
-            <div id="container">
+            <div id="footer">
                 <div id="infoDiv">
 
                     <div>

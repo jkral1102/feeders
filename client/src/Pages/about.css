@@ -1,0 +1,43 @@
+#wrapper{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(162, 31, 194);
+    min-height: 75vh;
+    text-align: center;
+    padding: 100px;
+    color: white;
+    overflow: hidden;
+}
+
+#aboutTeam{
+    flex: 1;
+    border-right: 2px solid black;
+    padding: 30px;
+}
+
+#cards{
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#card{
+    flex: 1;
+}
+
+
+
+#profileImg{
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid black;
+    
+}
+
+#name{
+    font-size: 16px;
+    color: white;
+    font-style: italic;
+}
+

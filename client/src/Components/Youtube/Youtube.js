@@ -5,6 +5,7 @@ import './Youtube.css'
 import YoutubeList from '../YoutubeList'
 import logo from './youtube.png'
 import YoutubeRender from '../YoutubeRender'
+import Google from "../Google";
 
 
 class Youtubes extends Component {
@@ -62,9 +63,11 @@ class Youtubes extends Component {
     return (
       <div id="youtube">
        
+      
+<Google />
 
         <form onSubmit={this.handleSubmit}>
-        <a href='https://www.youtube.com'><img src={logo} alt="" /></a>
+        <a href='https://www.youtube.com'><img id="youtubeLogo" src={logo} alt="Youtube" /></a>
             <input id="youtubeInput" type="text" onChange={this.handleChange} placeholder="Search Youtube" />
           <input type="submit" value="Submit" />
         </form>

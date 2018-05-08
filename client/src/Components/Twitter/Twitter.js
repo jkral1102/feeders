@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Twitter.css'
 import { Timeline } from 'react-twitter-widgets'
+import logo from './twitter.png'
 
 
 
@@ -52,8 +53,9 @@ class Twitter extends Component {
 
     return (
       <div id="twitter">
+      
         <form onSubmit={this.handleSubmit}>
-          
+        <a href='https://www.twitter.com'><img id="twitterLogo" src={logo} alt="Twitter" /></a>
           <input id="twitterInput" type="text" onChange={this.handleChange} placeholder="Search Twitter" />
        
           <input type="submit" value="Submit" />
