@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Navbar.css';
 import slogan from './slogan.png';
 import Sidebar from '../Sidebar';
+import styled from 'styled-components';
 
 
 class Navbar extends Component {
@@ -23,9 +24,7 @@ class Navbar extends Component {
   }
   toggleVisibility = () => {
     if(this.state.toggleSidebar === true){
-      this.setState({
-        toggleSidebar: false
-      });
+      this.setState({toggleSidebar: false});
     } else{
       this.setState({
         toggleSidebar: true

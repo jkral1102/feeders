@@ -22,8 +22,8 @@ class App extends Component {
       <Router>
         <div className="App">
           <Route exact path="/" component={HomePage} />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/settings" component={SettingsPage} />
+          <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/settings" component={SettingsPage} />
           
           {/* <Route component={NoMatch} /> */}
         </div>

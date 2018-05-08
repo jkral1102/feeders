@@ -1,13 +1,13 @@
 .sidebar {
-    margin-top: auto;
-    height: 80%;
+    margin-top: 13%;
+    height: 100%;
     width: 12em;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
-    overflow-x: hidden;
+    background-color: transparent;
+    overflow-x: overflow;
     transition: 0.5s;
     padding-top: 60px;
 }
@@ -41,5 +41,5 @@ span:hover {
 
 }
 @media(min-width:1200px){
-    .sidebar{ background-color: #888;}
+    .sidebar{ background-color: transparent;}
 }
