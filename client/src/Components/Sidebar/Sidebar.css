@@ -1,5 +1,5 @@
 .sidebar {
-    margin-top: 11em;
+    margin-top: auto;
     height: 80%;
     width: 12em;
     position: fixed;
@@ -31,7 +31,15 @@ span:hover {
 }
 
 
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+@media(min-width:576px){
+    
+}
+@media(min-width:768px){
+
+}
+@media(min-width:992px){
+
+}
+@media(min-width:1200px){
+    .sidebar{ background-color: #888;}
 }
