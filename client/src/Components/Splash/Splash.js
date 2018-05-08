@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './Splash.css'
-import Login from "../Login";
 import "./particles.json";
 
 
@@ -58,7 +57,6 @@ class Splash extends Component {
         
         </div>
         </div>
-        <Login open={this.state.isToggleOn} />
       </div>
     );
   }
