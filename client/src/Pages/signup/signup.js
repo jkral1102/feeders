@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 // import logo from "./logo.svg";
 import "./signup.css";
 import Form from "./form";
-import Navbar from "../../Components/Navbar";
-import Footer from "../../Components/Footer";
 
 injectTapEventPlugin();
 
@@ -26,14 +23,14 @@ class SignupPage extends Component {
 
   render() {
     return (
-      <MuiThemeProvider>
-        <div className="App">
-            <Navbar /> 
+    
+        <div className="signup">
+          
             <Form onChange={fields => this.onChange(fields)} />
-            <br />
-            <Footer />
+        
+      
         </div>
-      </MuiThemeProvider>
+     
     );
   }
 }
