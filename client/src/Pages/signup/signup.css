@@ -1,20 +1,4 @@
-.App {
-    text-align: center;
-    background-color: white;
-  }
-  
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-  }
-  
-  .App-header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
-    color: white;
-  }
-  
-  .App-intro {
-    font-size: large;
-  }
+.signup { 
+  background: linear-gradient(to right, rgba(186,153,255,1), rgba(108, 66, 195,1));
+  height: 100vh;
+} 

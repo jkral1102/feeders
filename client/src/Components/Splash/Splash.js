@@ -38,14 +38,14 @@ class Splash extends Component {
         <div className="col-5">
           <div> 
             <h2>FEED ME</h2>
-            <p> An App for all your social media.</p> </div>
+            <p className="sub"> An App for all your social media.</p> </div>
         </div>
         <div className="col-5">
 
-          <a href="#" className="link" onClick={this.handleClick}>
+          <a href="/login" className="link" onClick={this.handleClick}>
               Login
           </a>
-          <a href="#" className="link"> Sign Up </a>
+          <a href="/signup" className="link" onClick={this.handleClick}> Sign Up </a>
         
         </div>
         <div className="col-1">
