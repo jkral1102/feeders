@@ -1,9 +1,14 @@
 #twitter{
-    position: fixed;
-    left: 12.5em;
-    margin: 0 auto;
-    height: auto;
-    width: 25em;
+    flex: 1;
     background-color: rgba(124, 24, 218, 0.534);
     border: 2px solid black;
+}
+
+input {
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+#twitterLogo{
+    height: 100px;
 }

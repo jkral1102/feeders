@@ -1,19 +1,11 @@
 .sidebar {
-    margin-top: auto;
-    height: 80%;
-    width: 12em;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
+    max-width: 15%;
+    min-height: 75vh;
+    flex: 1;
     background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    text-align: center;
 }
-
-
-span {
+#feed {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -22,24 +14,13 @@ span {
     transition: 0.3s;
 }
 
-#tabs {
-    margin: 0 auto;
+
+#feed:hover {
+    color: #ffffff;
+    font-weight: bold;
 }
 
-span:hover {
-    color: #f1f1f1;
-}
-
-
-@media(min-width:576px){
-    
-}
-@media(min-width:768px){
-
-}
-@media(min-width:992px){
-
-}
-@media(min-width:1200px){
-    .sidebar{ background-color: #888;}
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }

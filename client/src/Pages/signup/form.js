@@ -1,6 +1,6 @@
 import React from "react";
 import TextField from "material-ui/TextField";
-import Button from "material-ui/Button";
+//import Button from 'material-ui/Button';
 
 class Form extends React.Component {
   state = {
@@ -133,7 +133,7 @@ class Form extends React.Component {
           floatingLabelFixed
         />
         <br />
-        <Button label="Submit" onClick={e => this.onSubmit(e)} primary />
+        {/* <Button label="Submit" onClick={e => this.onSubmit(e)} primary /> */}
       </form>
     );
   }

@@ -1,9 +1,5 @@
 #instagram{
-    position: fixed;
-    top: 15em;
-    left: 40em;
-    height: auto;
-    width: 25em;
+    flex: 1;
     background-color: rgba(124, 24, 218, 0.534);
     border: 2px solid black;
 }

@@ -1,7 +1,12 @@
 .App{
+min-height: 70vh;
+background-color: rgb(71, 70, 71);
+min-width: 100%;
+}
+
+#feeds{
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	flex-direction: row;
 }
 
 

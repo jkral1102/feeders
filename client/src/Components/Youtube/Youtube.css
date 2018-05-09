@@ -1,20 +1,9 @@
 #youtube{
-    position: fixed;
-    top: 11em;
-    right: 0;
-    height: 60%;
-    width: 25em;
-    background-color: rgb(245, 84, 84);
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.534);
     border: 2px solid black;
-    overflow: auto;
-    color: pink;
 }
 
-form{
-    background-color: white;
-    text-align: center;
-}
-
-.thumbnails{
-    font-size: 11px;
+#youtubeLogo{
+    height: 100px;
 }
