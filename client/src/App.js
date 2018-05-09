@@ -6,29 +6,32 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import HomePage from './Pages/home';
 import AboutPage from './Pages/about';
-import SettingsPage from './Pages/settings';
+//import SettingsPage from './Pages/settings';
 
 //import LoginPage from './Pages/login';
 import SignupPage from './Pages/signup/signup';
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
 class App extends Component {
   render() {
     return (
       //creating router to have multiple pages
- 
+      <MuiThemeProvider>
+
       <Router>
         <div className="App">
           <Route exact path="/" component={HomePage} />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/settings" component={SettingsPage} />
-          <Route path="/signup" component={SignupPage} />
+          <Route exact path="/about" component={AboutPage} />
+          {/* <Route path="/settings" component={SettingsPage} /> */}
+          <Route exact path="/signup" component={SignupPage} />
 
           
           {/* <Route component={NoMatch} /> */}
         </div>
       </Router>
+      </MuiThemeProvider>
 
       
     );
