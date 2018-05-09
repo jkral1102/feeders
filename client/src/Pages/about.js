@@ -27,18 +27,18 @@ class AboutPage extends Component {
 
           <div id="cards">
 
-            <div id="card"><a href="https://www.linkedin.com"><img src={pic1} alt="Jennifer" id="name" />
-              <span>Jennifer Kral</span></a></div>
-            <div id="card"><a href="https://www.linkedin.com"><img src={pic2} alt="David" id="name" />
-              <span>David Lopez</span></a></div>
-            <div id="card"><a href="https://www.linkedin.com"><img src={pic3} alt="Tyler" id="name" />
-              <span>Tyler Staney</span>
+            <div><a href="https://www.linkedin.com"><img src={pic1} alt="Jennifer" id="card" />
+              <p id="name" >Jennifer Kral</p></a></div>
+            <div><a href="https://www.linkedin.com"><img src={pic2} alt="David" id="card" />
+              <p id="name" >David Lopez</p></a></div>
+            <div><a href="https://www.linkedin.com"><img src={pic3} alt="Tyler" id="card" />
+              <p id="name" >Tyler Staney</p>
             </a></div>
-            <div id="card"><a href="https://www.linkedin.com"><img src={pic4} alt="Heather" id="name" />
-              <span>Heather A.</span>
+            <div><a href="https://www.linkedin.com"><img src={pic4} alt="Heather" id="card" />
+              <p id="name" >Heather A.</p>
             </a></div>
-            <div id="card"><a href="https://www.linkedin.com"><img src={pic5} alt="Emren" id="name" />
-              <span>Emren Ingvoldstad</span>
+            <div><a href="https://www.linkedin.com"><img src={pic5} alt="Emren" id="card"/>
+              <p id="name" >Emren Ingvoldstad</p>
             </a></div>
           </div>
 

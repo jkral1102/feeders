@@ -1,7 +1,7 @@
 #wrapper{
     display: flex;
     flex-direction: row;
-    background-color: rgb(162, 31, 194);
+    background-color: rgb(71, 70, 71);
     min-height: 75vh;
     text-align: center;
     padding: 100px;
@@ -17,18 +17,13 @@
 
 #cards{
     flex: 2;
-    padding: 20px;
     display: flex;
     flex-direction: row;
+    padding: 30px;
 }
 
 #card{
     flex: 1;
-}
-
-
-
-#profileImg{
     height: 130px;
     border-radius: 50%;
     border: 2px solid black;
