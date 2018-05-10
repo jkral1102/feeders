@@ -13,7 +13,7 @@ class HomePage extends Component {
   constructor() {
     super();
     this.state = {
-      loggedIn: true,
+      loggedIn: false,
       hasError: false,
       sidebar: false,
       youtube: false,
@@ -49,7 +49,7 @@ class HomePage extends Component {
     }
     return (
       <div className="App">
-      
+
         {this.state.loggedIn ?
           <div>
             <Navbar sidebar={this.showSidebar.bind(this)} />
@@ -59,23 +59,23 @@ class HomePage extends Component {
             <Splash />
           </div>
         }
-<div id="feeds">
-        {this.state.sidebar ?
-          <Sidebar
-            youtube={this.showYoutube.bind(this)}
-            instagram={this.showInstagram.bind(this)}
-            twitter={this.showTwitter.bind(this)}
-          /> : null}
+        <div id="feeds">
+          {this.state.sidebar ?
+            <Sidebar
+              youtube={this.showYoutube.bind(this)}
+              instagram={this.showInstagram.bind(this)}
+              twitter={this.showTwitter.bind(this)}
+            /> : null}
 
-        {this.state.youtube ?
-          <Youtube /> : null}
+          {this.state.youtube ?
+            <Youtube /> : null}
 
-        {this.state.instagram ?
-          <Instagram /> : null}
+          {this.state.instagram ?
+            <Instagram /> : null}
 
-        {this.state.twitter ?
-          <Twitter /> : null}
-          </div>
+          {this.state.twitter ?
+            <Twitter /> : null}
+        </div>
       </div>
 
     );

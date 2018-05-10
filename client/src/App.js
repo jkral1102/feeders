@@ -8,7 +8,7 @@ import HomePage from './Pages/home';
 import AboutPage from './Pages/about';
 //import SettingsPage from './Pages/settings';
 
-//import LoginPage from './Pages/login';
+import LoginPage from './Pages/login/loginForm';
 import SignupPage from './Pages/signup/signup';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -26,6 +26,7 @@ class App extends Component {
           <Route exact path="/about" component={AboutPage} />
           {/* <Route path="/settings" component={SettingsPage} /> */}
           <Route exact path="/signup" component={SignupPage} />
+          <Route exact path="/login" component={LoginPage} />
 
           
           {/* <Route component={NoMatch} /> */}

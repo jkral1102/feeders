@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 // import logo from "./logo.svg";
-import LoginForm from "./form";
+import LoginForm from "./loginForm";
 
-injectTapEventPlugin();
+//injectTapEventPlugin();
 
 class LoginPage extends Component {
   state = {
@@ -25,7 +25,7 @@ class LoginPage extends Component {
     
         <div className="login">
           
-            <Form onChange={fields => this.onChange(fields)} />
+            <LoginForm onChange={fields => this.onChange(fields)} />
         
       
         </div>
