@@ -26,11 +26,11 @@ class Splash extends Component {
    
     return (
       <div className="splash">
-      <div className="row">
-        <div className="col-12 size">
-          {/* <h1>Header</h1> */}
+        <div className="row">
+          <div className="col-12 size">
+            {/* <h1>Header</h1> */}
+          </div>
         </div>
-      </div>
       <div className="row">
         <div className="col-1">
         
@@ -38,7 +38,7 @@ class Splash extends Component {
         <div className="col-5">
           <div> 
             <h2>FEED ME</h2>
-            <p className="sub"> An App for all your social media.</p> </div>
+            <p className="sub"> An App for all your social media feeds.</p> </div>
         </div>
         <div className="col-5">
 

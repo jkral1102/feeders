@@ -35,15 +35,16 @@ class Sidebar extends Component {
 
 
     render() {
+        console.log("these are props in sidebar", this.props)
         return (
             <div className="sidebar">
                 <div id="tabs">
-                    <span onClick={this.clickTwitter}>Twitter</span>
-                    <span onClick={this.clickInstagram}>Instagram</span>
-                    <span onClick={this.clickYoutube}>Youtube</span>
-                    {this.state.twitter ? <Twitter /> : null}
+                    <span onClick={this.props.clickTwitter}>Twitter</span>
+                    <span onClick={this.props.clickInstagram}>Instagram</span>
+                    <span onClick={this.props.clickYoutube}>Youtube</span>
+                    {/* {this.state.twitter ? <Twitter /> : null}
                     {this.state.instagram ? <Instagram /> : null}
-                    {this.state.youtube ? <Youtube /> : null}
+                    {this.state.youtube ? <Youtube /> : null} */}
                 </div>
             </div>
         );

@@ -10,8 +10,7 @@ import SettingsPage from './Pages/settings';
 
 //import LoginPage from './Pages/login';
 import SignupPage from './Pages/signup/signup';
-
-
+// import Footer from '../src/Components/Footer';
 
 class App extends Component {
   render() {
@@ -20,12 +19,14 @@ class App extends Component {
  
       <Router>
         <div className="App">
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/about" component={AboutPage} />
-          <Route exact path="/settings" component={SettingsPage} />
-          <Route exact path="/signup" component={SignupPage} />
-          
-          {/* <Route component={NoMatch} /> */}
+          <div className="Site-Content">
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/settings" component={SettingsPage} />
+            <Route exact path="/signup" component={SignupPage} />
+            {/* <Route component={NoMatch} /> */}
+          </div>
+          {/* <Footer /> */}
         </div>
       </Router>
 

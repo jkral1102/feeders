@@ -33,6 +33,7 @@ class Navbar extends Component {
   };
 
   render() {
+    console.log("these are my props", this.props)
     const { visible } = this.state
     return (
       <div className="row navbar">
@@ -52,7 +53,11 @@ class Navbar extends Component {
 
           </ul>
         </div>
-        {this.state.toggleSidebar ? <Sidebar /> : null}
+        {this.state.toggleSidebar ? <Sidebar 
+        clickTwitter={this.props.clickTwitter}
+        clickInstagram={this.props.clickInstagram}
+        clickYoutube={this.props.clickYoutube}
+        /> : null}
       </div>
     );
   }
