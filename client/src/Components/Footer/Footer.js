@@ -13,36 +13,40 @@ class Footer extends Component {
 
     render() {
         return (
-            <div id="footer">
-                <div id="infoDiv">
-
-                    <div>
+            <div className="container">
+                {/* <div className="row">
+                    <div className="col-5 size" id="authors">
                         <strong>Authors</strong>
-
                         <a href="https://www.google.com">Emren</a>
                         <a href="https://www.google.com">Jennifer</a>
                         <a href="https://www.google.com">David</a>
                         <a href="https://www.google.com">Heather</a>
                         <a href="https://www.google.com">Tyler</a>
                     </div>
-                    <div id="socialDiv">
+                    <div className="col-.5 size" id="slashLine">
+                        <p> | </p>
+                    </div>
+                    <div className="col-5 size" id="social">
                         <strong> Social</strong>
                         <a href="https://www.google.com">Twitter</a>
                         <a href="https://www.google.com">Facebook</a>
                         <a href="https://www.google.com">Flickr</a>
                         <a href="https://www.google.com">Instagram</a>
+                    </div> 
+                </div>
+                <div className="row">
+                    <div className="col-12 size" id="footerlogoDiv">
+                        <img id="footerLogo" src={footerLogo} alt="logo" />
                     </div>
-                </div>
+                </div> */}
 
-                <div id="footerlogoDiv">
-                    <img id="footerLogo" src={footerLogo} alt="logo" />
-                </div>
-
-
-                <div id="copyright">
-                    <p>Feeders</p>
-                    <p>©2018 UMN Bootcamp</p>
-        {/* <p id="slogan"><em>For all your social media needs.</em></p> */}
+                <div className="row">
+                    <div className="col-12" id="sloganDiv">
+                        <p>One place for all your feeds #feedMe</p>
+                    </div>
+                    <div className="col-12" id="copyright">
+                        <a href="https://github.com/dwlopez91/feeders" target="_blank">Feeders | ©2018 UMN Bootcamp</a>
+                    </div>
                 </div>
 
 
@@ -54,4 +58,3 @@ class Footer extends Component {
 }
 
 export default Footer;
-

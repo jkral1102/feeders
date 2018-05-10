@@ -1,58 +1,77 @@
-#footer{
-    background-color: #6c42c3;
-    width: 100vw;
-    height: 24vh;
+.container{
+    /* display: inline-block; */
+    background: linear-gradient(to right, rgba(186,153,255,1), rgba(108, 66, 195,1));
+    position: fixed;
+    left: 0;
     bottom: 0;
-    position: absolute;
+    width: 100%;
+    max-width: 100%;
 }
 
-#infoDiv{
-    left: 20px;
-    margin-top: 10px;
+.row{
+    margin-top: 0px;
+    position: relative;
+    text-align: center;
+    /* width: 100%; */
 }
+
+/* #authors{
+    text-align: right;
+    position: relative;
+} */
+
+/* #slashLine{
+    position: relative;
+} */
+
+/* #social{
+    text-align: left;
+    position: relative;
+} */
+
 
 #copyright{
-
+    position: relative;
     font-size: 0.8rem;
-    color: #d8c7fd;
-    text-align: right;
+    color: #fff;
+    text-align: center;
+    /* width: 100%; */
   
 }  
 
-strong{
+/* strong{
     color: #ba99ff;
     font-weight: bold;
     letter-spacing: 1px;
-}
+} */
 
 a{
-    color: grey;
-    margin: 5px;
-    text-decoration: none;
-    font-size: 13px;
-    
+    color: #fff;
+    font-size: 13px;  
 }
 
 a:hover{
-    color: white;
+    color: rgb(241, 241, 241);
     margin-right: 20px;
 }
 
 #sloganDiv{
     margin: 0 auto;
     text-align: center;
+    font-style: oblique;
+    /* width: 100%; */
 }
 
-#socialDiv{
+/* #socialDiv{
     margin-top: 10px;
 }
-
-#footerLogo{
-    height: 4em;
-}
-
 #footerlogoDiv{
     margin: auto;
     width: 200px;
-    margin-top: 20px;
-}
+    text-align: center;
+} */
+
+/* #footerLogo{
+    height: 10%;
+    width: 10%;
+} */
