@@ -13,13 +13,18 @@ class HomePage extends Component {
   constructor() {
     super();
     this.state = {
-      loggedIn: true,
+      loggedIn: false,
       hasError: false,
       sidebar: false,
       youtube: false,
       instagram: false,
       twitter: false
     };
+    this.handleLogin = this.handleLogin.bind(this)
+    this.showSidebar = this.showSidebar.bind(this)
+    this.showYoutube = this.showYoutube.bind(this)
+    this.showInstagram = this.showInstagram.bind(this)
+    this.showTwitter = this.showTwitter.bind(this)
   }
 
   componentDidCatch(error, info) {
@@ -43,39 +48,43 @@ class HomePage extends Component {
     this.setState({ twitter: !this.state.twitter })
   }
 
+  handleLogin() {
+    this.setState({ loggedIn: true })
+  }
+
   render() {
     if (this.state.hasError) {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="App">
-      
+      <div id="homeContainer">
+
         {this.state.loggedIn ?
           <div>
-            <Navbar sidebar={this.showSidebar.bind(this)} />
+            <Navbar sidebar={this.showSidebar} />
             <Footer />
           </div>
           : <div>
-            <Splash />
+            <Splash handleLogin={this.handleLogin}/>
           </div>
         }
-<div id="feeds">
-        {this.state.sidebar ?
-          <Sidebar
-            youtube={this.showYoutube.bind(this)}
-            instagram={this.showInstagram.bind(this)}
-            twitter={this.showTwitter.bind(this)}
-          /> : null}
+        <div id="feeds">
+          {this.state.sidebar ?
+            <Sidebar
+              youtube={this.showYoutube}
+              instagram={this.showInstagram}
+              twitter={this.showTwitter}
+            /> : null}
 
-        {this.state.youtube ?
-          <Youtube /> : null}
+          {this.state.youtube ?
+            <Youtube /> : null}
 
-        {this.state.instagram ?
-          <Instagram /> : null}
+          {this.state.instagram ?
+            <Instagram /> : null}
 
-        {this.state.twitter ?
-          <Twitter /> : null}
-          </div>
+          {this.state.twitter ?
+            <Twitter /> : null}
+        </div>
       </div>
 
     );

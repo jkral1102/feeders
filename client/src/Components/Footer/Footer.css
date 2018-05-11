@@ -1,77 +1,51 @@
-.container{
-    /* display: inline-block; */
-    background: linear-gradient(to right, rgba(186,153,255,1), rgba(108, 66, 195,1));
-    position: fixed;
-    left: 0;
+#footer{
+    background-color: #6c42c3;
+    max-width: 100vw;
+    min-width: 100vw;
+    height: 5vh;
     bottom: 0;
-    width: 100%;
-    max-width: 100%;
+    padding: 35px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
 }
 
-.row{
-    margin-top: 0px;
-    position: relative;
-    text-align: center;
-    /* width: 100%; */
+#infoDiv{
+    left: 20px;
+    margin-top: 10px;
+    flex: 1;
+    letter-spacing: 1.5px;
 }
-
-/* #authors{
-    text-align: right;
-    position: relative;
-} */
-
-/* #slashLine{
-    position: relative;
-} */
-
-/* #social{
-    text-align: left;
-    position: relative;
-} */
-
 
 #copyright{
-    position: relative;
     font-size: 0.8rem;
-    color: #fff;
-    text-align: center;
-    /* width: 100%; */
-  
+    right: 20px;
+    margin-top: 10px;
+    color: #d8c7fd;
+    flex: 1;
 }  
 
-/* strong{
+strong{
     color: #ba99ff;
     font-weight: bold;
     letter-spacing: 1px;
-} */
+}
 
 a{
-    color: #fff;
-    font-size: 13px;  
+    color: grey;
+    text-decoration: none;
+    font-size: 13px;
+    
 }
 
 a:hover{
-    color: rgb(241, 241, 241);
-    margin-right: 20px;
+    color: white;
 }
 
-#sloganDiv{
-    margin: 0 auto;
-    text-align: center;
-    font-style: oblique;
-    /* width: 100%; */
+#footerLogo{
+    height: 50px;
 }
 
-/* #socialDiv{
-    margin-top: 10px;
-}
-#footerlogoDiv{
-    margin: auto;
+/* #footerlogoDiv{
     width: 200px;
-    text-align: center;
-} */
-
-/* #footerLogo{
-    height: 10%;
-    width: 10%;
 } */

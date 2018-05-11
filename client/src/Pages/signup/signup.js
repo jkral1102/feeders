@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import injectTapEventPlugin from 'react-tap-event-plugin';
-
-// import logo from "./logo.svg";
 import "./signup.css";
-import Form from "./form";
+import SignupForm from "./signupForm";
 
 injectTapEventPlugin();
 
@@ -26,7 +24,7 @@ class SignupPage extends Component {
     
         <div className="signup">
           
-            <Form onChange={fields => this.onChange(fields)} />
+            <SignupForm onChange={fields => this.onChange(fields)} />
         
       
         </div>
