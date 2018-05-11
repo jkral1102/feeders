@@ -3,7 +3,8 @@ const signupController = require("../../controllers/signupController.js");
 
 // Matches with "/api/signups"
 router.route("/")
-  .post(signupController.create);
+  .post(signupController.create)
+  .get(signupController.findAll);
 
 // // Matches with "/api/signups/:id"
 // router
@@ -13,8 +14,8 @@ router.route("/")
 //   .delete(signupController.remove);
 
 
-router.route("/login")
-  .get(signupController.findOne);
+// router.route("/login")
+//   .get(signupController.findOne);
 
 
 

@@ -34,25 +34,30 @@
 import React, { Component } from 'react';
 import './Navbar.css';
 import slogan from './slogan.png';
+import dropdown from './dropdown.png';
 
 
 class Navbar extends Component {
   render() {
+    // <li><a href="/signup">Sign up</a></li>
+    // <li><a href="/">Home</a></li>
+    //<i className="fa fa-cogs gear" alt="login" onClick={this.props.sidebar} />
     return (
       <div id="navbar">
-        <div>
-          <i className="fa fa-cogs gear" alt="login" id="loginIcon" onClick={this.props.sidebar} />
-        </div>
+        <div id='gearDiv'>
+          
+        <img src={dropdown} id="gear" alt="login" onClick={this.props.sidebar} />
+          </div>
 
-        <div>
+        <div id="sloganDiv">
           <img src={slogan} alt="login" id="slogan" />
         </div>
 
-        <div>
+        <div id='menuDiv'>
           <ul className="menu-items">
-            <li><a href="/about">About</a></li>
-            <li><a href="/signup">Sign up</a></li>
-            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/about">How it works</a></li>
+       
           </ul>
         </div>
       </div>

@@ -1,22 +1,28 @@
 #footer{
     background-color: #6c42c3;
-    width: 100vw;
-    height: 24vh;
+    max-width: 100vw;
+    min-width: 100vw;
+    height: 5vh;
     bottom: 0;
-    position: absolute;
+    padding: 35px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
 }
 
 #infoDiv{
     left: 20px;
     margin-top: 10px;
+    flex: 1;
+    letter-spacing: 1.5px;
 }
 
 #copyright{
-
     font-size: 0.8rem;
+    right: 20px;
+    margin-top: 10px;
     color: #d8c7fd;
-    text-align: right;
-  
+    flex: 1;
 }  
 
 strong{
@@ -27,7 +33,6 @@ strong{
 
 a{
     color: grey;
-    margin: 5px;
     text-decoration: none;
     font-size: 13px;
     
@@ -35,24 +40,12 @@ a{
 
 a:hover{
     color: white;
-    margin-right: 20px;
-}
-
-#sloganDiv{
-    margin: 0 auto;
-    text-align: center;
-}
-
-#socialDiv{
-    margin-top: 10px;
 }
 
 #footerLogo{
-    height: 4em;
+    height: 50px;
 }
 
-#footerlogoDiv{
-    margin: auto;
+/* #footerlogoDiv{
     width: 200px;
-    margin-top: 20px;
-}
+} */

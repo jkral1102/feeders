@@ -12,19 +12,23 @@ class Footer extends Component {
     }
 
     render() {
+        //     <div>
+        //     <strong>Authors</strong>
+
+        //     <a href="https://www.google.com">Emren</a>
+        //     <a href="https://www.google.com">Jennifer</a>
+        //     <a href="https://www.google.com">David</a>
+        //     <a href="https://www.google.com">Heather</a>
+        //     <a href="https://www.google.com">Tyler</a>
+        // </div>
         return (
             <div id="footer">
                 <div id="infoDiv">
 
-                    <div>
-                        <strong>Authors</strong>
-
-                        <a href="https://www.google.com">Emren</a>
-                        <a href="https://www.google.com">Jennifer</a>
-                        <a href="https://www.google.com">David</a>
-                        <a href="https://www.google.com">Heather</a>
-                        <a href="https://www.google.com">Tyler</a>
+                    <div id="footerlogoDiv">
+                        <img id="footerLogo" src={footerLogo} alt="logo" />
                     </div>
+
                     <div id="socialDiv">
                         <strong> Social</strong>
                         <a href="https://www.google.com">Twitter</a>
@@ -32,17 +36,14 @@ class Footer extends Component {
                         <a href="https://www.google.com">Flickr</a>
                         <a href="https://www.google.com">Instagram</a>
                     </div>
-                </div>
 
-                <div id="footerlogoDiv">
-                    <img id="footerLogo" src={footerLogo} alt="logo" />
-                </div>
 
+                </div>
 
                 <div id="copyright">
                     <p>Feeders</p>
                     <p>©2018 UMN Bootcamp</p>
-        {/* <p id="slogan"><em>For all your social media needs.</em></p> */}
+                    {/* <p id="slogan"><em>For all your social media needs.</em></p> */}
                 </div>
 
 

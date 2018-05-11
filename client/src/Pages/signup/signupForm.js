@@ -1,6 +1,8 @@
 import React from "react";
 import { TextField, RaisedButton } from "material-ui";
 import axios from 'axios'
+import './signup.css'
+
 
 class signupForm extends React.Component {
   state = {
@@ -51,10 +53,10 @@ class signupForm extends React.Component {
   //   return isError;
   // };
 
-  onSubmit () {
+  onSubmit() {
     axios.post('/api/signups', {
-      firstName:this.state.firstName,
-      lastName: this.state.lastName,
+      // firstName: this.state.firstName,
+      // lastName: this.state.lastName,
       username: this.state.username,
       password: this.state.password
     })
@@ -64,6 +66,8 @@ class signupForm extends React.Component {
     .catch(function (err) {
       console.log(err);
     })
+
+    //this.props.showSignup()
   }
   
   
@@ -107,6 +111,7 @@ class signupForm extends React.Component {
         // />
         // <br />
     return (
+      <div id='signupForm'>
       <form>
         <TextField
           name="firstName"
@@ -150,8 +155,9 @@ class signupForm extends React.Component {
           floatingLabelFixed
         />
         <br />
-        <RaisedButton label="Submit" onClick={e => this.onSubmit(e)} primary/>
+        <RaisedButton label="Submit" onClick={this.onSubmit.bind(this)} primary/>
       </form>
+      </div>
     );
   }
 }

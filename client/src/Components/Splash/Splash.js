@@ -1,62 +1,71 @@
 import React, { Component } from 'react'
 import './Splash.css'
-import "./particles.json";
+//import './particles.json';
+import Login from '../../Pages/login/loginForm'
+import Signup from '../../Pages/signup/signupForm'
+
+
+//https://stackoverflow.com/questions/31079081/programmatically-navigate-using-react-router
 
 
 
 class Splash extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          isToggleOn: false,
-        };
-    
-        // This binding is necessary to make `this` work in the callback
-        this.handleClick = this.handleClick.bind(this);
-      }
-    
-      handleClick() {
-        this.setState({
-          isToggleOn: !this.state.isToggleOn
-        });
-      }
-   
+  constructor(props) {
+    super(props);
+    this.state = {
+      showLogin: false,
+      showSignup: false,
+    };
+
+    // This binding is necessary to make `this` work in the callback
+    this.showLogin = this.showLogin.bind(this);
+    this.showSignup = this.showSignup.bind(this);
+  }
+
+
+  showLogin() {
+    this.setState({
+      showLogin: !this.state.showLogin
+    });
+    if(this.state.showSignup === true) {
+      this.setState({
+        showSignup: false
+      })
+    }
+  }
+
+  showSignup() {
+    this.setState({
+      showSignup: !this.state.showSignup
+    });
+    if(this.state.showLogin === true) {
+      this.setState({
+        showLogin: false
+      })
+    }
+  }
+
 
   render() {
-   
-    return (
-      <div className="splash">
-      <div className="row">
-        <div className="col-12 size">
-          {/* <h1>Header</h1> */}
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-1">
-        
-        </div>
-        <div className="col-5">
-          <div> 
-            <h2>FEED ME</h2>
-            <p className="sub"> An App for all your social media.</p> </div>
-        </div>
-        <div className="col-5">
 
-          <a href="/login" className="link" onClick={this.handleClick}>
-              Login
-          </a>
-          <a href="/signup" className="link" onClick={this.handleClick}> Sign Up </a>
-        
+    return (
+      <div id='splashContainer'>
+
+        <div className="splash">
+            <div>
+              <h2>FEED ME</h2>
+              <p className="sub"> An App for all your social media.</p> 
+            </div>
+
+            <div>
+              {/* <a href="/login" className="link" onClick={this.handleClick}> */}
+              <a className="link" onClick={this.showLogin}> Login </a>
+              <a className="link" onClick={this.showSignup}> Sign Up </a>
+            </div>
         </div>
-        <div className="col-1">
-        
-        </div>
-      </div>
-        <div className="row"> 
-        <div className="col-12 size">
-        
-        </div>
-        </div>
+
+        {this.state.showLogin ? <Login showLogin={this.showLogin} handleLogin={this.props.handleLogin} /> : null}
+        {this.state.showSignup ? <Signup showSignup={this.showSignup} /> : null}
       </div>
     );
   }
