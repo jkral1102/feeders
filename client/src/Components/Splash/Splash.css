@@ -1,3 +1,7 @@
+body {
+    background: linear-gradient(to right, rgba(186,153,255,1), rgba(108, 66, 195,1));
+}
+
 #splashContainer{
     display: flex;
     flex-direction: column;
@@ -37,4 +41,16 @@ h2 {
     font-size: 30px;
     color: white;
     font-family: 'Lato', sans-serif;
+}
+
+.box {
+    margin: auto;
+    width: 40%;
+    padding-bottom: 500px;
+}
+.signHolder {
+    background: rgba(186,153,255,1);
+    padding: 30px;
+    border-left: 6px solid white;
+    margin: auto;
 }
