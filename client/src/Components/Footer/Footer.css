@@ -7,11 +7,14 @@
     padding: 35px;
     position: fixed;
     display: block;
+    align-content: center;
+    text-align: center;
 }
 
 #infoDiv{
     letter-spacing: 1.5px;
 }
+
 /* 
 #copyright{
     font-size: 0.8rem;

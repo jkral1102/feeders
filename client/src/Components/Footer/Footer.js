@@ -19,7 +19,7 @@ class Footer extends Component {
                 // </div>
         return (
             <div id="footer">
-              
+              <div id='footerDivs'>
 
                     <div>
                         <img id="footerLogo" src={footerLogo} alt="logo" />
@@ -32,7 +32,7 @@ class Footer extends Component {
                         <a href="https://www.google.com">Flickr</a>
                         <a href="https://www.google.com">Instagram</a>
                     </div>
-
+</div>
 
             </div>
 

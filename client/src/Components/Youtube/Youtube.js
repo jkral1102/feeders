@@ -13,13 +13,13 @@ class Youtubes extends Component {
     super();
 
     this.state = {
-        search: "",
-        youtubeSearch: "",
-        searchClick: true,
-        videos: [],
-        videoClicked: false,
-        videoID: ""
-        }
+      search: "",
+      youtubeSearch: "",
+      searchClick: true,
+      videos: [],
+      videoClicked: false,
+      videoID: ""
+    }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -55,40 +55,34 @@ class Youtubes extends Component {
       .then(resp => resp.json())
       .then((resp) => {
         console.log(resp);
-        this.setState({videos: resp.items});
+        this.setState({ videos: resp.items });
       });
-    }
+  }
 
   render() {
     return (
       <div id="youtube">
-       
-      
-
 
         <form onSubmit={this.handleSubmit}>
-        <a href='https://www.youtube.com'><img id="youtubeLogo" src={logo} alt="Youtube" /></a>
-            <input id="youtubeInput" type="text" onChange={this.handleChange} placeholder="Search Youtube" />
+          <a href='https://www.youtube.com'><img id="youtubeLogo" src={logo} alt="Youtube" /></a>
+          <input id="youtubeInput" type="text" onChange={this.handleChange} placeholder="Search Youtube" />
           <input type="submit" value="Submit" />
         </form>
 
         <div className="thumbnails">
 
-
-     
-
-        {this.state.videos.map(vid => {
-          return <YoutubeList
-            image={vid.snippet.thumbnails.default.url}
-            title={vid.snippet.title}
-            videoID={this.state.videoID}
-            handleVideoClick={this.handleVideoClick}
-          />
-        })}
-</div>
-        
-        {this.state.videoClicked ? <YoutubeRender videoID={this.state.videoID}/> : null}   
+          {this.state.videos.map(vid => {
+            return <YoutubeList
+              image={vid.snippet.thumbnails.default.url}
+              title={vid.snippet.title}
+              videoID={this.state.videoID}
+              handleVideoClick={this.handleVideoClick}
+            />
+          })}
         </div>
+
+        {this.state.videoClicked ? <YoutubeRender videoID={this.state.videoID} /> : null}
+      </div>
 
     );
   }
