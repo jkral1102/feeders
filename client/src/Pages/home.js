@@ -13,7 +13,7 @@ class HomePage extends Component {
   constructor() {
     super();
     this.state = {
-      loggedIn: false,
+      loggedIn: true,
       hasError: false,
       sidebar: false,
       youtube: false,
