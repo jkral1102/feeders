@@ -18,7 +18,6 @@ class YoutubeList extends Component {
         return(
             <div id="list" onClick={this.handleClick} >
                 <img src={this.props.image} alt="" /><p>{this.props.title}</p>
-                
             </div>
 
         )

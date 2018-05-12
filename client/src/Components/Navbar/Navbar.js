@@ -16,7 +16,7 @@ class Navbar extends Component {
                 <div id="sloganDiv">
                     <img src={slogan} alt="login" id="slogan" />
                 </div>
-                <Settings />
+                
                 <div id='menuDiv'>
 
 
@@ -24,6 +24,7 @@ class Navbar extends Component {
                         <li><a href="/about">About Us</a></li>
                         <li id='rightLink'><a href="/">Home</a></li>
                     </ul>
+                    <Settings />
                 </div>
 
             </div>
