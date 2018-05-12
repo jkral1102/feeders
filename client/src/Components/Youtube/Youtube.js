@@ -5,7 +5,7 @@ import './Youtube.css'
 import YoutubeList from '../YoutubeList'
 import logo from './youtube.png'
 import YoutubeRender from '../YoutubeRender'
-import Google from "../Google";
+//import Google from "../Google";
 
 
 class Youtubes extends Component {
@@ -15,7 +15,7 @@ class Youtubes extends Component {
     this.state = {
         search: "",
         youtubeSearch: "",
-        searchClick: false,
+        searchClick: true,
         videos: [],
         videoClicked: false,
         videoID: ""
@@ -64,7 +64,7 @@ class Youtubes extends Component {
       <div id="youtube">
        
       
-<Google />
+
 
         <form onSubmit={this.handleSubmit}>
         <a href='https://www.youtube.com'><img id="youtubeLogo" src={logo} alt="Youtube" /></a>
@@ -75,7 +75,7 @@ class Youtubes extends Component {
         <div className="thumbnails">
 
 
-    {this.state.videoClicked ? <YoutubeRender videoID={this.state.videoID}/> : null}    
+     
 
         {this.state.videos.map(vid => {
           return <YoutubeList
@@ -85,9 +85,11 @@ class Youtubes extends Component {
             handleVideoClick={this.handleVideoClick}
           />
         })}
+</div>
+        
+        {this.state.videoClicked ? <YoutubeRender videoID={this.state.videoID}/> : null}   
         </div>
 
-      </div>
     );
   }
 }

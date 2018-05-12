@@ -6,24 +6,20 @@
     bottom: 0;
     padding: 35px;
     position: fixed;
-    display: flex;
-    flex-direction: row;
+    display: block;
 }
 
 #infoDiv{
-    left: 20px;
-    margin-top: 10px;
-    flex: 1;
     letter-spacing: 1.5px;
 }
-
+/* 
 #copyright{
     font-size: 0.8rem;
     right: 20px;
     margin-top: 10px;
     color: #d8c7fd;
     flex: 1;
-}  
+}   */
 
 strong{
     color: #ba99ff;

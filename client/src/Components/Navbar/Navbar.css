@@ -27,19 +27,34 @@
 
     #menuDiv{
         flex: 1;
+
+
     }
     
     ul{
         list-style-type: none;
         overflow: hidden;
+
+        display: flex;
+        flex-direction: row;
      }
      
-
+#rightLink {
+    border-left: 1px solid white;
+}
      
      li a {
+         flex:1;
+         margin: 10px;
+         
+         
         color: white;
-        font-size: 20px;
+        font-size: 28px;
         text-decoration: none;
+     }
+
+     li a:hover{
+         text-decoration: underline;
      }
     
     

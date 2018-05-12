@@ -2,11 +2,13 @@
 	background-color: #342f58;
 	max-width: 100vw;
 	min-width: 100vw;
+	
 }
 
 #feeds{
 	display: flex;
 	flex-direction: row;
+	align-items: start;
 }
 
 
