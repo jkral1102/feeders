@@ -50,7 +50,7 @@ class Splash extends Component {
 
     return (
       <div id='splashContainer'>
-
+      <div className="box">
         <div className="splash">
             <div>
               <h2>FEED ME</h2>
@@ -63,9 +63,11 @@ class Splash extends Component {
               <a className="link" onClick={this.showSignup}> Sign Up </a>
             </div>
         </div>
-
+        <div className="signHolder">
         {this.state.showLogin ? <Login showLogin={this.showLogin} handleLogin={this.props.handleLogin} /> : null}
         {this.state.showSignup ? <Signup showSignup={this.showSignup} /> : null}
+        </div>
+        </div>
       </div>
     );
   }
