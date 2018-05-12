@@ -12,39 +12,26 @@ class Footer extends Component {
     }
 
     render() {
-        //     <div>
-        //     <strong>Authors</strong>
-
-        //     <a href="https://www.google.com">Emren</a>
-        //     <a href="https://www.google.com">Jennifer</a>
-        //     <a href="https://www.google.com">David</a>
-        //     <a href="https://www.google.com">Heather</a>
-        //     <a href="https://www.google.com">Tyler</a>
-        // </div>
+                  // <div>
+                //     <p>Feeders</p>
+                //     <p>©2018 UMN Bootcamp</p>
+                //     {/* <p id="slogan"><em>For all your social media needs.</em></p> */}
+                // </div>
         return (
             <div id="footer">
-                <div id="infoDiv">
+              
 
-                    <div id="footerlogoDiv">
+                    <div>
                         <img id="footerLogo" src={footerLogo} alt="logo" />
-                    </div>
+                   </div>
 
-                    <div id="socialDiv">
+                    <div id='infoDiv'>
                         <strong> Social</strong>
                         <a href="https://www.google.com">Twitter</a>
                         <a href="https://www.google.com">Facebook</a>
                         <a href="https://www.google.com">Flickr</a>
                         <a href="https://www.google.com">Instagram</a>
                     </div>
-
-
-                </div>
-
-                <div id="copyright">
-                    <p>Feeders</p>
-                    <p>©2018 UMN Bootcamp</p>
-                    {/* <p id="slogan"><em>For all your social media needs.</em></p> */}
-                </div>
 
 
             </div>

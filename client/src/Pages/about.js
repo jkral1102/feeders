@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import './about.css';
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import pic1 from "../Assets/Images/profileImg1.jpg";
-import pic2 from "../Assets/Images/profileImg2.jpg";
-import pic3 from "../Assets/Images/profileImg3.jpg";
-import pic4 from "../Assets/Images/profileImg4.jpg";
-import pic5 from "../Assets/Images/profileImg5.jpg";
+import linkedinLogo from "../Assets/Images/linkedin.png";
+// profile pics
+import jen from "../Assets/Images/jen.png";
+import david from "../Assets/Images/david.png";
+import heather from "../Assets/Images/heather.png";
+import emren from "../Assets/Images/profilePlaceholder.jpg";
+import tyler from "../Assets/Images/tyler.jpg";
+
+
 
 class AboutPage extends Component {
 
@@ -17,31 +21,86 @@ class AboutPage extends Component {
         <div id="wrapper">
 
           <div id="aboutTeam">
-            <h1> About Us</h1>
-            <p>There are hundreds of social media sites on the menu. With Feeders you don't have to keep getting
+
+            <div id='aboutTitle'>
+              <h1> About Feeders</h1>
+            </div>
+            <div id="aboutText">
+
+
+              <p>
+                There are hundreds of social media sites on the menu. With Feeders you don't have to keep getting
               bothered by all those alerts on your phone and going into all those apps.
-              You wouldn't eat the ingrediants of a meal separately, would you?</p>
+              You wouldn't eat the ingrediants of a meal separately, would you?
 
-            <p>Feeders is to serve you ALL your favorite social media sites into one bite.</p>
+
+            </p>
+
+              <p>Feeders is to serve you ALL your favorite social media sites into one bite.</p>
+            </div>
           </div>
 
-          <div id="cards">
+          <div id='teamDiv'>
+            <div id='teamTitle'>
+              <h1> Meet Our Team!</h1>
+            </div>
+            <div id="cards">
 
-            <div><a href="https://www.linkedin.com"><img src={pic1} alt="Jennifer" id="card" />
-              <p id="name" >Jennifer Kral</p></a></div>
-            <div><a href="https://www.linkedin.com"><img src={pic2} alt="David" id="card" />
-              <p id="name" >David Lopez</p></a></div>
-            <div><a href="https://www.linkedin.com"><img src={pic3} alt="Tyler" id="card" />
-              <p id="name" >Tyler Staney</p>
-            </a></div>
-            <div><a href="https://www.linkedin.com"><img src={pic4} alt="Heather" id="card" />
-              <p id="name" >Heather A.</p>
-            </a></div>
-            <div><a href="https://www.linkedin.com"><img src={pic5} alt="Emren" id="card"/>
-              <p id="name" >Emren Ingvoldstad</p>
-            </a></div>
+              <div>
+                <img src={david} alt="david" id="card" />
+
+                <a href="https://www.linkedin.com/in/dwlopez91" alt='linkedin'>
+                  <p id="name"> David Lopez </p>
+                  <img id='linkedinLogo' src={linkedinLogo} alt='linkedIn' />
+
+                </a>
+              </div>
+
+              <div>
+                <img src={jen} alt="Jennifer" id="card" />
+                <div id='contact'>
+
+                  <a href="https://www.linkedin.com/in/jennifer-kral-050b56161/">
+                    <p id="name"> Jennifer Kral </p>
+                    <img id='linkedinLogo' src={linkedinLogo} alt='linkedIn' />
+
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <img src={heather} alt="heather" id="card" />
+
+                <a href="https://www.linkedin.com/in/heather-akpan-322023127">
+                  <p id="name"> Heather Akpan </p>
+                  <img id='linkedinLogo' src={linkedinLogo} alt='linkedIn' />
+
+                </a>
+              </div>
+
+              <div>
+                <img src={tyler} alt="tyler" id="card" />
+
+                <a href="https://www.linkedin.com/">
+                  <p id="name"> Tyler Stanley </p>
+                  <img id='linkedinLogo' src={linkedinLogo} alt='linkedIn' />
+
+                </a>
+              </div>
+
+              <div>
+                <img src={emren} alt="emren" id="card" />
+
+                <a href="https://www.linkedin.com/in/emren-ingvoldstad-574441102/">
+                  <p id="name"> Emren Ingvoldstad </p>
+                  <img id='linkedinLogo' src={linkedinLogo} alt='linkedIn' />
+
+                </a>
+              </div>
+
+            </div>
+
           </div>
-
         </div>
         <Footer />
       </div>

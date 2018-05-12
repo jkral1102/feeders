@@ -1,0 +1,15 @@
+order of new stuff: 
+
+1) X Add team pics and linkedin links to About Us page. Left: 'About Us'. Right: 'Meet Our Team' 
+1) X add feed logos to sidebar 
+2) ~X add tweet box to twitter feed 
+3) X add settings dropdown on navbar - right side (List: How it Works, Feed Settings, Theme, Help)
+4) youtube feed design
+5) youtube - get videos to work
+6) add twitter and facebook buttons in footer or About Us page
+
+
+At home: 
+* review all REVIEW pages 
+* change login/signup pages to components folder
+* change About page wrapper css - make it have space around edges OR two 0.5 opacity divs with space between

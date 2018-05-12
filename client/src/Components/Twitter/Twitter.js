@@ -10,12 +10,10 @@ class Twitter extends Component {
     super();
 
     this.state = {
-      screenName: "",
-      searchClick: false
+      screenName: "joerogan"
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
@@ -26,17 +24,9 @@ class Twitter extends Component {
   }
 
 
-  handleSubmit(event) {
-    event.preventDefault();
-    this.setState({
-      searchClick: !this.state.searchClick
-    });
-
-  }
 
   render() {
-    // Conditionally render twitter if twitter search button was clicked
-    let TwitterFeed = this.state.searchClick === true ?
+    let TwitterFeed = 
 
       <Timeline style={this.twitterStyle}
         dataSource={{
@@ -49,17 +39,16 @@ class Twitter extends Component {
         }}
         onLoad={() => console.log('Timeline is loaded!')}
       />
-      : null;
-
     return (
       <div id="twitter">
       
-        <form onSubmit={this.handleSubmit}>
-        <a href='https://www.twitter.com'><img id="twitterLogo" src={logo} alt="Twitter" /></a>
-          <input id="twitterInput" type="text" onChange={this.handleChange} placeholder="Search Twitter" />
-       
-          <input type="submit" value="Submit" />
-        </form>
+        <div>
+        <a href='https://www.twitter.com'>
+          <img id="twitterLogo" src={logo} alt="Twitter" />
+        </a>
+          <input id="twitterInput" type="text" onChange={this.handleChange} placeholder="Search Twitter!" />
+
+        </div>
 
         {TwitterFeed}
 
