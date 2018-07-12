@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Navbar.css'
-import slogan from './slogan.png'
+import slogan from './1.png'
 import dropdown from './dropdown.png'
 //import settingsGear from './settingsGear.png'
 import Settings from '../Settings'
@@ -20,10 +20,7 @@ class Navbar extends Component {
                 <div id='menuDiv'>
 
 
-                    <ul className="menu-items">
-                        <li><a href="/about">About Us</a></li>
-                        <li id='rightLink'><a href="/">Home</a></li>
-                    </ul>
+
                     <Settings />
                 </div>
 

@@ -12,18 +12,26 @@ class Footer extends Component {
     }
 
     render() {
-                  // <div>
-                //     <p>Feeders</p>
-                //     <p>©2018 UMN Bootcamp</p>
-                //     {/* <p id="slogan"><em>For all your social media needs.</em></p> */}
-                // </div>
+        // <div>
+        //     <p>Feeders</p>
+        //     <p>©2018 UMN Bootcamp</p>
+        //     {/* <p id="slogan"><em>For all your social media needs.</em></p> */}
+        // </div>
         return (
             <div id="footer">
-              <div id='footerDivs'>
+
+                <ul className="menu-items">
+                    <li><a href="/about">About Us</a></li>
+                    <li id='rightLink'><a href="/">Home</a></li>
+                </ul>
+
+
+                <div id='footerDivs'>
+
 
                     <div>
                         <img id="footerLogo" src={footerLogo} alt="logo" />
-                   </div>
+                    </div>
 
                     <div id='infoDiv'>
                         <strong> Social</strong>
@@ -32,7 +40,7 @@ class Footer extends Component {
                         <a href="https://www.google.com">Flickr</a>
                         <a href="https://www.google.com">Instagram</a>
                     </div>
-</div>
+                </div>
 
             </div>
 

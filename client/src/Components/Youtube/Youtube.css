@@ -3,13 +3,13 @@
     flex: 1 1;
     max-width: 40vw;
     margin: 0 auto;
-    background-color: #282b2c;
+    background-color: black;
     padding-top: 10v;
-    border: solid 4px #6926b6;
-    border-radius: 25px;
+    border: solid 4px #4874ba;
+  
     font-size: 10px;
     text-align: center;
-    margin-top: 5%;
+    
 }
 
 .thumbnails{

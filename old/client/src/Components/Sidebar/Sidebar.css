@@ -1,0 +1,44 @@
+.sidebar {
+    max-width: 15%;
+    flex: 1;
+    background-color: #28252a;
+    margin: 20px;
+    border: solid #6c42c3;
+    text-align: center;
+}
+
+#sidebarTitle{
+    color: #6c42c3;
+    text-align: center;
+    border: solid;
+    
+}
+#feed {
+    padding: 8px 8px 8px 32px;
+    height: 30px;
+    color: #818181;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    margin: 5%;
+    border-radius: 10px;
+    background-color: #3b3939;
+    
+}
+
+#feedDiv{
+
+    margin: 20px;
+    border-bottom: solid 0.5px #6c42c3;
+    
+}
+
+#feed:hover {
+    opacity: .5;
+    border: 2px solid #6c42c3;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}

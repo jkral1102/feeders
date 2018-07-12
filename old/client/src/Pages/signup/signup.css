@@ -1,0 +1,8 @@
+/* .signup { 
+  background: linear-gradient(to right, rgba(186,153,255,1), rgba(108, 66, 195,1));
+  height: 100vh;
+}  */
+
+#signupForm{
+flex: 1;
+}

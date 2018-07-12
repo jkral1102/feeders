@@ -1,15 +1,13 @@
 #twitter{
-    -ms-flex: 1 1;
-    flex: 1 1;
-    max-width: 40vw;
-    margin: 0 auto;
+    flex: 1;
+    width: 40vw;
+    
     background-color: #282b2c;
     padding-top: 10v;
     border: solid 4px #6926b6;
-    border-radius: 25px;
+  
     font-size: 10px;
     text-align: center;
-    margin-top: 5%;
     }
   
 
@@ -19,5 +17,5 @@
 }
 
 #twitterLogo{
-    height: 100px;
+    height: 80px;
 }

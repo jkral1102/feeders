@@ -1,0 +1,50 @@
+#footer{
+    background-color: #6c42c3;
+    max-width: 100vw;
+    min-width: 100vw;
+    height: 5vh;
+    bottom: 0;
+    padding: 35px;
+    position: fixed;
+    display: block;
+    align-content: center;
+    text-align: center;
+}
+
+#infoDiv{
+    letter-spacing: 1.5px;
+}
+
+/* 
+#copyright{
+    font-size: 0.8rem;
+    right: 20px;
+    margin-top: 10px;
+    color: #d8c7fd;
+    flex: 1;
+}   */
+
+strong{
+    color: #ba99ff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+a{
+    color: grey;
+    text-decoration: none;
+    font-size: 13px;
+    
+}
+
+a:hover{
+    color: white;
+}
+
+#footerLogo{
+    height: 50px;
+}
+
+/* #footerlogoDiv{
+    width: 200px;
+} */
